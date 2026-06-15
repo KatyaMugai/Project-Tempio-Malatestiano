@@ -25,18 +25,18 @@ _A Renaissance monument in Rimini_
 
 ## Why Tempio Malatestiano?
 
-Tempio Malatestiano is significant for several reasons. It is one of the most important monuments in Rimini and represents a complex example of cultural heritage where architecture, history, art and symbolic elements are closely connected.
+**Tempio Malatestiano** is significant for several reasons. It is one of **the most important monuments in Rimini** and represents a complex example of cultural heritage where architecture, history, art and symbolic elements are closely connected.
 
 The building is not only a church, but also a monument associated with Renaissance architectural culture, the Malatesta family, internal chapels, artistic objects and heraldic symbols. For this reason, it is a particularly interesting case for exploring how cultural heritage information is represented in a knowledge graph.
 
-We selected Tempio Malatestiano for this project because:
+We selected **Tempio Malatestiano** for this project because:
 
 - It is a complex architectural heritage object with several internal components.
 - It is connected to important historical figures, such as Sigismondo Pandolfo Malatesta and Isotta degli Atti.
 - It contains or is associated with artistic and symbolic elements, such as the Crocifisso giottesco and the Malatesta coat of arms.
 - Its ArCo representation already includes useful information, especially through related photographic resources but some relevant information appears only indirectly in labels and is not represented as explicit RDF relations.
 
-This makes Tempio Malatestiano a suitable case for a knowledge graph enrichment project. The resource is already documented in ArCo, but its semantic representation can be improved by making implicit information more explicit and machine-readable.
+This makes **Tempio Malatestiano** a suitable case for a knowledge graph enrichment project. The resource is already documented in ArCo, but its semantic representation can be improved by making implicit information more explicit and machine-readable.
 
 ---
 
