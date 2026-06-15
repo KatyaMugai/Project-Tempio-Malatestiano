@@ -1,5 +1,8 @@
+---
 layout: default
 title: Methodology
+---
+
 
 <div style="text-align: center; margin-bottom: 20px;">
   <a href="index.html">Home</a> |
