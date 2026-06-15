@@ -45,8 +45,7 @@ We searched for the main resource describing Tempio Malatestiano and analysed it
 
 The selected resource is:
 
-```text
-https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+(https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046)
 
 The initial queries were used to retrieve:
 
