@@ -107,9 +107,9 @@ The enrichment focuses on:
 * introducing new resources and properties where needed.
 
 In this way, the project improves the semantic granularity of the knowledge graph and makes the information more searchable, reusable and machine-readable.
+
 <hr>
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="index.html">← Previous</a>
   <a href="methodology.html">Next →</a>
 </div>
-```
