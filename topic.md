@@ -1,8 +1,7 @@
-
-⸻
-
+---
 layout: default
 title: Tempio Malatestiano
+---
 
 <div style="text-align: center; margin-bottom: 20px;">
   <a href="index.html">🏠 Home</a> |
@@ -17,20 +16,20 @@ title: Tempio Malatestiano
   <a href="conclusion.html">✅ Conclusion</a>
 </div>
 
-Tempio Malatestiano
+# Tempio Malatestiano
 
-A Knowledge Graph Enrichment Project based on the ArCo Knowledge Graph
+_A Knowledge Graph Enrichment Project based on the ArCo Knowledge Graph_
 
-⸻
+---
 
-Selected Resource
+## Selected Resource
 
-For this project, we selected the ArCo resource describing Tempio Malatestiano, an architectural heritage object located in Rimini, Italy.
+For this project, we selected the ArCo resource describing **Tempio Malatestiano**, an architectural heritage object located in Rimini, Italy.
 
 The selected resource is:
 
+```text
 https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
-
 Tempio Malatestiano was selected because it is a complex cultural heritage object. It is not only a church, but also a monument connected to architectural components, historical figures, artistic objects and symbolic elements.
 
 This makes it a suitable case for exploring how cultural heritage information is represented in a knowledge graph and how this representation can be enriched through RDF triples.
@@ -68,7 +67,7 @@ Focus of the Analysis
 
 The project focuses on two main information gaps.
 
-Gap 1: Internal architectural components
+Gap 1: Internal Architectural Components
 
 The first gap concerns the representation of internal architectural elements.
 
@@ -81,7 +80,7 @@ In the original RDF description, the main resource directly models only the faca
 
 This suggests that information about the internal structure of the monument exists in the knowledge graph, but it is not represented as direct construction-element relations of the main resource.
 
-Gap 2: Historical and artistic entities
+Gap 2: Historical and Artistic Entities
 
 The second gap concerns historical and artistic entities associated with Tempio Malatestiano.
 
@@ -108,9 +107,9 @@ The enrichment focuses on:
 * introducing new resources and properties where needed.
 
 In this way, the project improves the semantic granularity of the knowledge graph and makes the information more searchable, reusable and machine-readable.
-
 <hr>
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="index.html">← Previous</a>
   <a href="methodology.html">Next →</a>
 </div>
+```
