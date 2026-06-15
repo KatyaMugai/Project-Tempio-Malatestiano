@@ -1,70 +1,237 @@
-Methodology
+layout: default
+title: Methodology
 
-The project follows the methodology of knowledge graph exploration and enrichment.
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="index.html">Home</a> |
+  <a href="topic.html">Topic</a> |
+  <a href="methodology.html">Methodology</a> |
+  <a href="sparql.html">SPARQL Results</a> |
+  <a href="gaps.html">Identifying Gaps</a> |
+  <a href="llms.html">LLM Prompts</a> |
+  <a href="rdf-enrichment.html">RDF Triples</a> |
+  <a href="vocabulary-extension.html">Vocabulary Extension</a> |
+  <a href="challenges.html">Challenges</a> |
+  <a href="conclusion.html">Conclusion</a>
+</div>
 
-The main goal was to analyse an existing cultural heritage resource in the ArCo knowledge graph, identify possible information gaps in its RDF description, and propose new RDF triples that could enrich the graph.
+# Methodology
 
-The selected resource was Tempio Malatestiano:
+This section explains the methodology followed in our project to explore and enrich the RDF description of <strong>Tempio Malatestiano</strong> in the <strong>ArCo knowledge graph</strong>.
 
+The project was based on a step-by-step process that combined <strong>SPARQL exploration</strong>, <strong>gap identification</strong>, <strong>RDF modeling</strong>, <strong>vocabulary extension</strong> and the use of <strong>Large Language Models</strong>.
+
+---
+
+## Step-by-step process
+
+### 1. Selecting the topic
+
+We selected <strong>Tempio Malatestiano</strong>, an architectural heritage resource located in Rimini, Italy.
+
+This resource was chosen because it is a complex cultural heritage object. It is connected not only to architecture, but also to historical figures, artistic objects, internal chapels and symbolic elements.
+
+For this reason, it is a suitable case for exploring how cultural heritage information is represented in a knowledge graph and how this representation can be enriched.
+
+---
+
+### 2. Exploring the ArCo knowledge graph
+
+The first step of the analysis was to explore the ArCo knowledge graph through the official SPARQL endpoint.
+
+We searched for the main resource describing Tempio Malatestiano and analysed its RDF description.
+
+The selected resource is:
+
+```text
 https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
 
-Methodological Steps
+The initial queries were used to retrieve:
 
-The work was divided into five main steps.
+- the label of the resource;
+- its RDF types;
+- its direct properties;
+- its related resources;
+- its documentation and photographic resources.
 
-1. Selection of the resource
+---
 
-First, I selected a cultural heritage resource from the ArCo knowledge graph. I chose Tempio Malatestiano because it is a complex architectural monument connected to historical, artistic and symbolic elements.
+### 3. Analysing the direct RDF description
 
-2. SPARQL exploration
+After identifying the main resource, we analysed which information was directly connected to it through RDF properties.
 
-Then, I explored the RDF description of the selected resource through SPARQL queries.
+This step was important because the goal of the project was not only to find information about <strong>Tempio Malatestiano</strong>, but also to understand how this information is structured in the knowledge graph.
 
-The purpose of this step was to understand:
+In particular, we checked whether the main resource directly represented:
 
-* which properties are directly associated with the main resource;
-* which types and labels are used to describe it;
-* which related resources are connected to it;
-* whether internal architectural components are explicitly represented;
-* whether historical and artistic entities are directly linked to the monument.
+- internal architectural components;
+- historical figures;
+- artistic objects;
+- heraldic or symbolic elements.
 
-3. Identification of information gaps
+---
 
-After the initial exploration, I compared the direct RDF description of the main resource with the information contained in related photographic resources.
+### 4. Exploring related photographic resources
 
-This comparison made it possible to identify two main gaps:
+The next step was to analyse the resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>.
 
-1. Internal architectural components, such as chapels, are mentioned in photographic resource labels but are not directly modeled as construction elements of the main architectural resource.
-2. Historical figures and artistic elements associated with the monument are also mentioned in photographic resource labels but are not directly represented as structured RDF relations.
+These related resources were especially important because many of them are photographic documentation resources.
 
-4. RDF enrichment
+The labels of these photographic resources contained relevant information about:
 
-After identifying the gaps, I proposed new RDF triples.
+- internal chapels;
+- tombs;
+- sculptures;
+- historical figures;
+- artistic objects;
+- heraldic elements.
 
-The first group of triples adds internal chapels as construction elements of Tempio Malatestiano.
+This showed that some information was present in the dataset, but only indirectly through textual labels.
 
-The second group of triples connects the monument to historical persons, artistic objects and heraldic elements.
+---
 
-5. Vocabulary extension
+### 5. Identifying information gaps
 
-Since some of the required entities and properties were not available in the original RDF description, I proposed a small vocabulary extension using a local namespace:
+By comparing the direct RDF description of the main resource with the information found in related photographic resources, we identified two main information gaps.
 
-@prefix ex: <https://example.org/tempio-malatestiano/enrichment/> .
+#### Gap 1: Internal architectural components
 
-The vocabulary extension introduces new classes, new resources and new properties to represent the enrichment more precisely.
+The first gap concerns the internal architectural structure of <strong>Tempio Malatestiano</strong>.
 
-Tools Used
+In the direct RDF description, only the facade is explicitly modeled as a construction element. However, the photographic resources repeatedly mention several internal chapels, such as:
 
-The main tools used for the project were:
+- <strong>Cappella delle Virtù / S. Sigismondo</strong>;
+- <strong>Cappella dello Zodiaco</strong>;
+- <strong>Cappella degli Angeli</strong>;
+- <strong>Cappella degli Antenati</strong>.
 
-* the ArCo SPARQL endpoint;
-* RDF and RDFS vocabularies;
-* SPARQL SELECT and CONSTRUCT queries;
-* ChatGPT and Gemini for testing LLM-based prompting strategies;
-* GitHub Pages for publishing the final project website.
+This suggests that these internal architectural components exist in the documentation, but they are not directly represented as construction elements of the main architectural resource.
 
-Purpose of the Methodology
+#### Gap 2: Historical and artistic entities
 
-The purpose of this methodology was not only to add new triples, but also to show how these triples were identified and justified.
+The second gap concerns historical and artistic entities associated with <strong>Tempio Malatestiano</strong>.
 
-The project therefore combines data exploration, gap analysis, RDF modeling and vocabulary extension.
+The photographic resources mention several important figures and elements, including:
+
+- <strong>Sigismondo Pandolfo Malatesta</strong>;
+- <strong>Isotta degli Atti</strong>;
+- <strong>Crocifisso giottesco</strong>;
+- <strong>Stemma Malatesta</strong>.
+
+However, these entities are not directly connected to the main architectural resource through explicit RDF properties.
+
+---
+
+### 6. Using Large Language Models
+
+Large Language Models were used as support tools during the project.
+
+We tested models such as <strong>ChatGPT</strong> and <strong>Gemini</strong> in order to see whether they could help interpret the identified gaps and suggest possible enrichment strategies.
+
+Different prompting techniques were used, including:
+
+- zero-shot prompting;
+- chain-of-thought prompting;
+- few-shot chain-of-thought prompting.
+
+The answers produced by the models were compared with the evidence obtained through SPARQL queries.
+
+The LLMs were not used as the only source of knowledge. Their role was to support interpretation and reflection, while the actual evidence came from the RDF data and SPARQL results.
+
+---
+
+### 7. Proposing RDF triples
+
+After identifying the gaps, we proposed new RDF triples to enrich the knowledge graph.
+
+For the first gap, we proposed adding direct links between <strong>Tempio Malatestiano</strong> and its internal chapels using the property <code>cdesc:hasConstructionElement</code>.
+
+For the second gap, we proposed adding new relations between <strong>Tempio Malatestiano</strong> and historical or artistic entities associated with it.
+
+The proposed enrichment aims to transform information that was previously implicit in labels into explicit RDF triples.
+
+---
+
+### 8. Creating a vocabulary extension
+
+Some of the required relations were not sufficiently represented by the existing vocabulary.
+
+For this reason, we proposed a small local vocabulary extension using the namespace:
+
+<p>
+  <code>@prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .</code>
+</p>
+
+The vocabulary extension introduces:
+
+- new classes;
+- new resources;
+- new properties;
+- labels;
+- comments;
+- domains;
+- ranges.
+
+This makes the proposed enrichment more precise and semantically explicit.
+
+---
+
+### 9. Publishing the project website
+
+The final step was to publish the project as a website using <strong>GitHub Pages</strong>.
+
+The website presents the main parts of the project:
+
+- the selected topic;
+- the methodology;
+- the SPARQL exploration;
+- the identified gaps;
+- the RDF enrichment;
+- the vocabulary extension;
+- the LLM prompts;
+- the challenges;
+- the conclusion.
+
+---
+
+## Tools used
+
+### ArCo
+
+<strong>ArCo</strong> was used as the main knowledge graph for the project. It provides RDF descriptions of Italian cultural heritage resources.
+
+### SPARQL
+
+<strong>SPARQL</strong> was used to query the ArCo knowledge graph.
+
+We used <code>SELECT</code> queries to retrieve and analyse existing information, and <code>CONSTRUCT</code> queries to generate proposed RDF triples.
+
+### RDF and RDFS
+
+<strong>RDF</strong> was used to represent the proposed enrichment in the form of triples.
+
+<strong>RDFS</strong> was used to define new classes, labels, comments, domains and ranges in the vocabulary extension.
+
+### Large Language Models
+
+<strong>Large Language Models</strong> were used to support the interpretation of the gaps and to compare different prompting strategies.
+
+### GitHub Pages
+
+<strong>GitHub Pages</strong> was used to publish the project website and organize the work into clear sections.
+
+---
+
+## Methodological logic
+
+The central methodological idea of the project was to compare what is explicitly modeled in the RDF graph with what is only implicitly available in textual labels.
+
+In the case of <strong>Tempio Malatestiano</strong>, the ArCo resource already contains many related photographic resources. However, several important pieces of information appear only in the labels of those resources.
+
+The enrichment therefore aims to transform implicit textual information into explicit, structured and machine-readable RDF triples.
+
+This process makes the knowledge graph more precise, more searchable and more useful for cultural heritage research.
+
+<div style="display: flex; justify-content: space-between; margin-top: 2em;">
+  <a href="topic.html">Previous</a>
+  <a href="sparql.html">Next</a>
+</div>
