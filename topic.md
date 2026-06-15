@@ -18,7 +18,7 @@ title: Tempio Malatestiano
 
 # Tempio Malatestiano
 
-## A Renaissance monument in Rimini
+_A Renaissance monument in Rimini_
 
 <!-- If you want to add an image later, upload it to the repository and replace the path below -->
 <!-- ![Tempio Malatestiano](assets/images/tempio-malatestiano.jpg) -->
@@ -34,8 +34,7 @@ We selected Tempio Malatestiano for this project because:
 - It is a complex architectural heritage object with several internal components.
 - It is connected to important historical figures, such as Sigismondo Pandolfo Malatesta and Isotta degli Atti.
 - It contains or is associated with artistic and symbolic elements, such as the Crocifisso giottesco and the Malatesta coat of arms.
-- Its ArCo representation already includes useful information, especially through related photographic resources.
-- At the same time, some relevant information appears only indirectly in labels and is not represented as explicit RDF relations.
+- Its ArCo representation already includes useful information, especially through related photographic resources but some relevant information appears only indirectly in labels and is not represented as explicit RDF relations.
 
 This makes Tempio Malatestiano a suitable case for a knowledge graph enrichment project. The resource is already documented in ArCo, but its semantic representation can be improved by making implicit information more explicit and machine-readable.
 
@@ -45,12 +44,9 @@ This makes Tempio Malatestiano a suitable case for a knowledge graph enrichment 
 
 The main objectives of this project are:
 
-- To explore the ArCo knowledge graph using the official SPARQL endpoint.
-- To analyse the RDF description of Tempio Malatestiano.
-- To identify information gaps in the current representation of the monument.
-- To propose new RDF triples that could enrich the ArCo Knowledge Graph.
-- To suggest a small vocabulary extension when the existing vocabulary is not sufficient.
-- To use Large Language Models, such as ChatGPT and Gemini, to support the interpretation of the identified gaps and compare their outputs.
+- To explore the **ArCo knowledge graph** using the official SPARQL endpoint and identify information gaps.
+- To **propose new RDF triples** that could enrich the ArCo Knowledge Graph.
+- To use **Large Language Models**, such as ChatGPT and Gemini, to support the interpretation of the identified gaps and compare their outputs.
 
 ---
 
