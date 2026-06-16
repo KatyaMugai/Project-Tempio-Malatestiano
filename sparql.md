@@ -65,11 +65,8 @@ LIMIT 50
   The selected resource for the project is:
 </p>
 
-<p>
-  <code style="white-space: normal; word-break: break-all; overflow-wrap: anywhere;">
-    https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
-  </code>
-</p>
+  <pre><code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+  </code></pre>
 
 <p>
   This resource became the <strong>main subject</strong> of the following SPARQL exploration.
