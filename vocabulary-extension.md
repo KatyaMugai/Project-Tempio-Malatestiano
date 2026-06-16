@@ -57,28 +57,30 @@ title: Vocabulary Extension
   The vocabulary extension introduces three new classes:
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Class</th>
-      <th>Purpose</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ex:Chapel</code></td>
-      <td>Represents internal chapels as architectural components of Tempio Malatestiano.</td>
-    </tr>
-    <tr>
-      <td><code>ex:ArtisticObject</code></td>
-      <td>Represents artistic objects associated with the monument.</td>
-    </tr>
-    <tr>
-      <td><code>ex:HeraldicElement</code></td>
-      <td>Represents heraldic or symbolic elements connected to the monument.</td>
-    </tr>
-  </tbody>
-</table>
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Class</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:Chapel</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Represents internal chapels as architectural components of Tempio Malatestiano.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:ArtisticObject</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Represents artistic objects associated with the monument.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:HeraldicElement</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Represents heraldic or symbolic elements connected to the monument.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <h3>RDF representation of the new classes</h3>
 
@@ -121,37 +123,39 @@ ex:HeraldicElement
   The first group of new resources represents the internal chapels identified through the labels of photographic resources.
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Resource</th>
-      <th>Label</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ex:CappellaDelleVirtu</code></td>
-      <td>Cappella delle Virtù / S. Sigismondo</td>
-      <td><code>ex:Chapel</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:CappellaDelloZodiaco</code></td>
-      <td>Cappella dello Zodiaco</td>
-      <td><code>ex:Chapel</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:CappellaDegliAngeli</code></td>
-      <td>Cappella degli Angeli</td>
-      <td><code>ex:Chapel</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:CappellaDegliAntenati</code></td>
-      <td>Cappella degli Antenati</td>
-      <td><code>ex:Chapel</code></td>
-    </tr>
-  </tbody>
-</table>
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Resource</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Label</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:CappellaDelleVirtu</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Cappella delle Virtù / S. Sigismondo</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:Chapel</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:CappellaDelloZodiaco</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Cappella dello Zodiaco</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:Chapel</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:CappellaDegliAngeli</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Cappella degli Angeli</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:Chapel</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:CappellaDegliAntenati</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Cappella degli Antenati</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:Chapel</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <h3>RDF representation</h3>
 
@@ -191,37 +195,39 @@ ex:CappellaDegliAntenati
   The second group of new resources represents historical figures, an artistic object and a heraldic element connected to Tempio Malatestiano.
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Resource</th>
-      <th>Label</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ex:SigismondoPandolfoMalatesta</code></td>
-      <td>Sigismondo Pandolfo Malatesta</td>
-      <td><code>foaf:Person</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:IsottaDegliAtti</code></td>
-      <td>Isotta degli Atti</td>
-      <td><code>foaf:Person</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:CrocifissoGiottesco</code></td>
-      <td>Crocifisso giottesco</td>
-      <td><code>ex:ArtisticObject</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:StemmaMalatesta</code></td>
-      <td>Stemma Malatesta</td>
-      <td><code>ex:HeraldicElement</code></td>
-    </tr>
-  </tbody>
-</table>
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Resource</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Label</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:SigismondoPandolfoMalatesta</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Sigismondo Pandolfo Malatesta</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>foaf:Person</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:IsottaDegliAtti</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Isotta degli Atti</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>foaf:Person</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:CrocifissoGiottesco</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Crocifisso giottesco</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:ArtisticObject</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:StemmaMalatesta</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Stemma Malatesta</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:HeraldicElement</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <h3>RDF representation</h3>
 
@@ -260,32 +266,34 @@ ex:StemmaMalatesta
   The vocabulary extension also introduces three new properties. These properties are used to express historical, artistic and heraldic relations that were not directly available in the original RDF description.
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Meaning</th>
-      <th>Range</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ex:hasAssociatedPerson</code></td>
-      <td>Connects a cultural heritage resource to a historical person associated with it.</td>
-      <td><code>foaf:Person</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:containsArtisticObject</code></td>
-      <td>Connects an architectural heritage resource to an artistic object associated with or contained in it.</td>
-      <td><code>ex:ArtisticObject</code></td>
-    </tr>
-    <tr>
-      <td><code>ex:hasHeraldicElement</code></td>
-      <td>Connects a cultural heritage resource to a heraldic element associated with it.</td>
-      <td><code>ex:HeraldicElement</code></td>
-    </tr>
-  </tbody>
-</table>
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Property</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Meaning</th>
+        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Range</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:hasAssociatedPerson</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Connects a cultural heritage resource to a historical person associated with it.</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>foaf:Person</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:containsArtisticObject</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Connects an architectural heritage resource to an artistic object associated with or contained in it.</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:ArtisticObject</code></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:hasHeraldicElement</code></td>
+        <td style="border: 1px solid #ddd; padding: 12px;">Connects a cultural heritage resource to a heraldic element associated with it.</td>
+        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:HeraldicElement</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <h3>RDF representation</h3>
 
