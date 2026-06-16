@@ -31,7 +31,9 @@ title: Identifying Gaps
 </p>
 
 <p>
-  <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046</code>
+  <code style="white-space: normal; word-break: break-all; overflow-wrap: anywhere;">
+    https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+  </code>
 </p>
 
 <hr>
