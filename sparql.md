@@ -66,8 +66,9 @@ LIMIT 50
 </p>
 
 <p>
-  <pre><code> https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
-  </pre></code>
+  <code style="white-space: normal; word-break: break-all; overflow-wrap: anywhere;">
+    https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+  </code>
 </p>
 
 <p>
