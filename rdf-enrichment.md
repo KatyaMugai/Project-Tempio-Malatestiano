@@ -38,11 +38,8 @@ title: RDF Enrichment
   The main ArCo resource selected for the project is:
 </p>
 
-<p>
-  <code style="white-space: normal; word-break: break-all; overflow-wrap: anywhere;">
-    https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
-  </code>
-</p>
+<pre><code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+  </code></pre>
 
 <p>
   A browsable version of the resource is available here:
