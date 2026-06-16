@@ -52,7 +52,7 @@ title: Identifying Gaps
   To check this, we used the property <code>cdesc:hasConstructionElement</code>, which is used to connect a cultural heritage resource to its construction elements.
 </p>
 
-<h3>Query 1 — Checking existing construction elements</h3>
+<h3>Query 3 — Checking existing construction elements</h3>
 
 <pre><code>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX cdesc: &lt;https://w3id.org/arco/ontology/construction-description/&gt;
@@ -100,7 +100,7 @@ LIMIT 100
 
 <hr>
 
-<h3>Query 2 — Looking for internal chapels in photographic resources</h3>
+<h3>Query 4 — Looking for internal chapels in photographic resources</h3>
 
 <p>
   Since the direct RDF description returned only the facade, we analysed the photographic resources linked to Tempio Malatestiano through <code>rdfs:seeAlso</code>.
@@ -207,7 +207,7 @@ ORDER BY DESC(?numberOfPhotos)
   These include historical persons, artistic objects and heraldic elements.
 </p>
 
-<h3>Query 3 — Finding historical and artistic entities in photographic resources</h3>
+<h3>Query 5 — Finding historical and artistic entities in photographic resources</h3>
 
 <p>
   This query was used to count how often selected historical and artistic entities appear in the labels of photographic resources linked to Tempio Malatestiano through <code>rdfs:seeAlso</code>.
@@ -299,7 +299,7 @@ ORDER BY DESC(?numberOfPhotos)
 
 <hr>
 
-<h3>Query 4 — Checking whether these entities are directly linked</h3>
+<h3>Query 6 — Checking whether these entities are directly linked</h3>
 
 <p>
   To verify whether the selected historical and artistic entities were already directly linked to the main architectural resource, we ran another query excluding <code>rdfs:seeAlso</code>.
