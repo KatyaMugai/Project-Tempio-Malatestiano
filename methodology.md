@@ -37,7 +37,7 @@ This resource was chosen because it is a complex cultural heritage object. It is
 
 ### 2. Exploring the ArCo knowledge graph
 
-The first step of the analysis was to explore the ArCo knowledge graph through the official SPARQL endpoint. We searched for the main resource describing Tempio Malatestiano and analysed its RDF description.
+The first step of the analysis was to explore the ArCo knowledge graph through the official [SPARQL endpoint](https://dati.cultura.gov.it/sparql). We searched for the main resource describing Tempio Malatestiano and analysed its RDF description.
 
 The initial queries were used to retrieve:
 
