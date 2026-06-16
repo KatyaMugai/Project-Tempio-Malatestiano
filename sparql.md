@@ -31,7 +31,7 @@ title: SPARQL Results
 <h2>Query 1 — Finding the main ArCo resource</h2>
 
 <p>
-  The first step was to identify the main ArCo resource corresponding to <strong>Tempio Malatestiano</strong>.
+  The first step was to identify the main ArCo resource corresponding to [**Tempio Malatestiano**](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html).
 </p>
 
 <h3>Explanation of keywords used</h3>
