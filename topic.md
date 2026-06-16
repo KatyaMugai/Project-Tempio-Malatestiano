@@ -49,6 +49,15 @@ The main objectives of this project are:
 
 ---
 
+## Research Questions
+
+<ul>
+  <li>Which architectural components of Tempio Malatestiano are directly represented in ArCo?</li>
+  <li>Which internal chapels appear only in photographic resource labels?</li>
+  <li>Which historical and artistic entities are associated with Tempio Malatestiano but not directly linked to the main resource?</li>
+  <li>Which RDF triples and vocabulary extensions could make this information explicit?</li>
+</ul>
+
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="index.html">← Previous</a>
   <a href="methodology.html">Next →</a>
