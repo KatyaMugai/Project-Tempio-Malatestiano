@@ -3,7 +3,7 @@ layout: default
 title: Methodology
 ---
 
-
+  <h3 style="text-align: center;">Sections:</h3>
 <div style="text-align: center; margin-bottom: 20px;">
   <a href="index.html">Home</a> |
   <a href="topic.html">Topic</a> |
