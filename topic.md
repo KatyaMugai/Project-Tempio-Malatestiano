@@ -20,8 +20,7 @@ title: Tempio Malatestiano
 
 _A Renaissance monument in Rimini_
 
-<!-- If you want to add an image later, upload it to the repository and replace the path below -->
-<!-- ![Tempio Malatestiano](assets/images/tempio-malatestiano.jpg) -->
+<img src="tempio_malatestiano_rimini.jpg" alt="Tempio Malatestiano in Rimini">
 
 ## Why Tempio Malatestiano?
 
