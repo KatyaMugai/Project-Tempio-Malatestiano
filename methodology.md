@@ -60,7 +60,7 @@ This step was important because the goal of the project was not only to find inf
 
 The next step was to analyse the resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>.
 
-These related resources were especially important because many of them are photographic documentation resources and we discovered the labels of these photographic resources contained relevant information that was not shown directly through textual labels.
+These related resources were especially important because many of them are photographic documentation resources and we discovered the labels of these photographic resources contained relevant information that was not directly represented as structured RDF relations of the main resource.
 
 ---
 
@@ -125,7 +125,7 @@ Some of the required relations were not sufficiently represented by the existing
   <code>@prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .</code>
 </p>
 
-The vocabulary extension several concepts, which makes the proposed enrichment more precise and semantically explicit.
+The vocabulary extension introduces several concepts, making the proposed enrichment more precise and semantically explicit.
 
 ---
 
