@@ -13,4 +13,5 @@ Gemini
 A: Yes, Leon Battista Alberti had a direct, foundational connection to the Tempio Malatestiano in Rimini. Around 1450, he was commissioned by Sigismondo Pandolfo Malatesta to design the revolutionary white marble exterior façade and lateral arcades, turning the pre-existing Gothic church into a pioneering masterpiece of Renaissance architecture.Would you like me to generate the corresponding RDF triples in Turtle format for this specific relationship, or do you have more historical pairs to verify for your knowledge graph project?
 
 ChatGPT
+
 A: Yes. Leon Battista Alberti had a major architectural connection to the Tempio Malatestiano in Rimini. Around 1450, he designed the Renaissance transformation of the medieval church of San Francesco at the request of Sigismondo Pandolfo Malatesta. Alberti created the classical marble façade and overall architectural scheme, making the Tempio Malatestiano one of the earliest and most influential examples of Renaissance architecture.
