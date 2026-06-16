@@ -60,18 +60,7 @@ This step was important because the goal of the project was not only to find inf
 
 The next step was to analyse the resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>.
 
-These related resources were especially important because many of them are photographic documentation resources.
-
-The labels of these photographic resources contained relevant information about:
-
-- internal chapels;
-- tombs;
-- sculptures;
-- historical figures;
-- artistic objects;
-- heraldic elements.
-
-This showed that some information was present in the dataset, but only indirectly through textual labels.
+These related resources were especially important because many of them are photographic documentation resources and we discovered the labels of these photographic resources contained relevant information that was not shown directly through textual labels.
 
 ---
 
@@ -83,14 +72,7 @@ By comparing the direct RDF description of the main resource with the informatio
 
 The first gap concerns the internal architectural structure of <strong>Tempio Malatestiano</strong>.
 
-In the direct RDF description, only the facade is explicitly modeled as a construction element. However, the photographic resources repeatedly mention several internal chapels, such as:
-
-- <strong>Cappella delle Virtù / S. Sigismondo</strong>;
-- <strong>Cappella dello Zodiaco</strong>;
-- <strong>Cappella degli Angeli</strong>;
-- <strong>Cappella degli Antenati</strong>.
-
-This suggests that these internal architectural components exist in the documentation, but they are not directly represented as construction elements of the main architectural resource.
+In the direct RDF description, only the facade is explicitly modeled as a construction element. However, the photographic resources repeatedly mention several internal chapels. This suggests that these internal architectural components exist in the documentation, but they are not directly represented as construction elements of the main architectural resource.
 
 #### Gap 2: Historical and artistic entities
 
