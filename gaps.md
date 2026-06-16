@@ -99,11 +99,7 @@ LIMIT 100
 <h3>Query 4 — Looking for internal chapels in photographic resources</h3>
 
 <p>
-  Since the direct RDF description returned only the facade as a construction element, we analysed the photographic resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>.
-</p>
-
-<p>
-  In this query, we used <code>UNION</code> to compare two types of information in one query:
+  Since the direct RDF description returned only the facade as a construction element, we analysed the photographic resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>. In this query the purpose was to verify whether internal chapels are mentioned in the labels of related photographic resources. Moreover, we used <code>UNION</code> to compare two types of information in one query:
 </p>
 
 <ul>
@@ -199,27 +195,14 @@ ORDER BY ?source DESC(?numberOfResources)
 <h3>Final consideration for Gap 1</h3>
 
 <p>
-  The use of <code>UNION</code> makes it possible to compare structured RDF data and implicit textual information within the same query.
-</p>
-
-<p>
-  The first part of the query retrieves the construction elements directly connected to the main <strong>Tempio Malatestiano</strong> resource through <code>cdesc:hasConstructionElement</code>. This part returns only the <strong>facade</strong>.
-</p>
-
-<p>
-  The second part of the query retrieves related photographic resources through <code>rdfs:seeAlso</code> and searches their labels for the names of internal chapels.
+  The use of <code>UNION</code> makes it possible to compare structured RDF data and implicit textual information within the same query. The query results show that several internal chapels are repeatedly mentioned in the labels of photographic resources associated with Tempio Malatestiano, which means that the information exists in the ArCo dataset, but it is not represented at the right semantic level.
+While the first part of the query retrieves the construction elements directly connected to the main <strong>Tempio Malatestiano</strong> resource through <code>cdesc:hasConstructionElement</code>; it returns only the <strong>facade</strong>.
 </p>
 
 <p>
   The result shows that several internal chapels, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>, are repeatedly mentioned in photographic resource labels.
-</p>
-
-<p>
-  Therefore, the first gap is confirmed: information about the internal architectural structure of the monument exists in ArCo, but it is not represented at the right semantic level.
-</p>
-
-<p>
-  The internal chapels are present only indirectly in textual labels, while the main architectural resource directly models only the facade as a construction element. To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
+Therefore, the first gap is confirmed: information about the internal architectural structure of the monument exists in ArCo, but it is not represented at the right semantic level.
+The internal chapels are present only indirectly in textual labels, while the main architectural resource directly models only the facade as a construction element. To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
 </p>
 
 <h2>2. Identification of the Second Gap</h2>
