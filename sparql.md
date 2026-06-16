@@ -192,43 +192,67 @@ LIMIT 100
 </p>
 
 <p>
-  The aim was to check whether internal architectural elements were mentioned in the labels of related photographic resources.
+  In this query, we used <code>UNION</code> in order to compare two different types of information in one query:
+</p>
+
+<ul>
+  <li>construction elements directly connected to the main Tempio Malatestiano resource;</li>
+  <li>internal chapels mentioned only in the labels of related photographic resources.</li>
+</ul>
+
+<p>
+  The aim was to check whether internal architectural elements were explicitly modeled as construction elements or only indirectly mentioned in photographic resource labels.
 </p>
 
 <h3>Explanation of keywords used</h3>
 
 <ul>
-  <li><code>rdfs:seeAlso</code>: links the main resource to related resources.</li>
+  <li><code>UNION</code>: combines the results of two different graph patterns in one query.</li>
+  <li><code>cdesc:hasConstructionElement</code>: retrieves construction elements directly connected to the main cultural heritage resource.</li>
+  <li><code>rdfs:seeAlso</code>: links the main resource to related resources, including photographic documentation.</li>
   <li><code>photoLabel</code>: contains the label of each related photographic resource.</li>
   <li><code>REGEX</code>: searches for specific chapel names in the labels.</li>
-  <li><code>COUNT</code>: counts how many photographic resources mention each element.</li>
-  <li><code>GROUP BY</code>: groups the results by architectural element.</li>
+  <li><code>COUNT</code>: counts how many resources mention or represent each element.</li>
+  <li><code>GROUP BY</code>: groups the results by source and element name.</li>
 </ul>
 
 <h3>SPARQL Query</h3>
 
 <pre><code>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX cdesc: &lt;https://w3id.org/arco/ontology/construction-description/&gt;
 
-SELECT ?elementName (COUNT(DISTINCT ?photo) AS ?numberOfPhotos)
+SELECT ?source ?elementName (COUNT(DISTINCT ?item) AS ?numberOfResources)
 WHERE {
   VALUES ?cp { &lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt; }
 
-  ?cp rdfs:seeAlso ?photo .
-  ?photo rdfs:label ?photoLabel .
+  {
+    ?cp cdesc:hasConstructionElement ?item .
+    BIND("Direct construction element" AS ?source)
+    BIND("Facade" AS ?elementName)
+  }
 
-  BIND(
-    IF(REGEX(STR(?photoLabel), "Cappella degli Antenati", "i"), "Cappella degli Antenati",
-    IF(REGEX(STR(?photoLabel), "Cappella degli Angeli", "i"), "Cappella degli Angeli",
-    IF(REGEX(STR(?photoLabel), "Cappella delle Virt", "i"), "Cappella delle Virtù / S. Sigismondo",
-    IF(REGEX(STR(?photoLabel), "Cappella dello Zodiaco", "i"), "Cappella dello Zodiaco",
-    IF(REGEX(STR(?photoLabel), "Cappella d.Isotta", "i"), "Cappella d'Isotta",
-    ""))))) AS ?elementName
-  )
+  UNION
 
-  FILTER(?elementName != "")
+  {
+    ?cp rdfs:seeAlso ?item .
+    ?item rdfs:label ?photoLabel .
+
+    BIND("Photographic resource label" AS ?source)
+
+    BIND(
+      IF(REGEX(STR(?photoLabel), "Cappella degli Antenati", "i"), "Cappella degli Antenati",
+      IF(REGEX(STR(?photoLabel), "Cappella degli Angeli", "i"), "Cappella degli Angeli",
+      IF(REGEX(STR(?photoLabel), "Cappella delle Virt", "i"), "Cappella delle Virtù / S. Sigismondo",
+      IF(REGEX(STR(?photoLabel), "Cappella dello Zodiaco", "i"), "Cappella dello Zodiaco",
+      IF(REGEX(STR(?photoLabel), "Cappella d.Isotta", "i"), "Cappella d'Isotta",
+      ""))))) AS ?elementName
+    )
+
+    FILTER(?elementName != "")
+  }
 }
-GROUP BY ?elementName
-ORDER BY DESC(?numberOfPhotos)
+GROUP BY ?source ?elementName
+ORDER BY ?source DESC(?numberOfResources)
 </code></pre>
 
 <h3>Results</h3>
@@ -236,28 +260,39 @@ ORDER BY DESC(?numberOfPhotos)
 <table>
   <thead>
     <tr>
+      <th>Source</th>
       <th>Architectural element</th>
-      <th>Number of photographic resources</th>
+      <th>Number of resources</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>Direct construction element</td>
+      <td>Facade</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Photographic resource label</td>
       <td>Cappella delle Virtù / S. Sigismondo</td>
       <td>54</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella dello Zodiaco</td>
       <td>43</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella degli Angeli</td>
       <td>28</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella degli Antenati</td>
       <td>26</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella d'Isotta</td>
       <td>1</td>
     </tr>
@@ -267,14 +302,20 @@ ORDER BY DESC(?numberOfPhotos)
 <h3>Interpretation</h3>
 
 <p>
-  The results show that <strong>several internal chapels</strong> are repeatedly mentioned in <strong>photographic resource labels</strong>.
+  The results show a clear difference between structured RDF data and information that appears only indirectly in textual labels.
 </p>
 
 <p>
-  This means that information about the internal architectural structure of Tempio Malatestiano exists in ArCo, but it is stored indirectly in labels rather than explicitly represented as construction-element relations.
+  The first part of the query returns the <strong>facade</strong> as the only construction element directly connected to the main Tempio Malatestiano resource.
 </p>
 
-<hr>
+<p>
+  The second part of the query returns several internal chapels that are repeatedly mentioned in the labels of related photographic resources, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>.
+</p>
+
+<p>
+  This confirms that information about the internal architectural structure of Tempio Malatestiano exists in ArCo, but it is stored indirectly in photographic resource labels rather than explicitly represented as construction-element relations.
+</p>
 
 <h2>Query 5 — Finding historical and artistic entities in photographic resources</h2>
 
