@@ -1,5 +1,6 @@
 layout	default
 title	Identifying LLM
+
 Home | Topic | Methodology | SPARQL Results | Identifying Gaps | LLM Prompts | RDF Triples | Vocabulary Extension | Challenges | Conclusion
 
 we are working on a project to enrich a cultural heritage knowledge graph using RDF triples. We need to verify whether there is a historical relationship between a spesific person and a monument. Can you answer the final question the same style? 
