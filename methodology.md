@@ -19,7 +19,7 @@ title: Methodology
 
 # Methodology
 
-This section explains the methodology followed in our project to explore and enrich the RDF description of <strong>Tempio Malatestiano</strong> in the [**ArCo**](http://wit.istc.cnr.it/arco/) knowledge graph.
+This section explains the methodology followed in our project to explore and enrich the RDF description of [**Tempio Malatestiano**](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) in the [**ArCo**](http://wit.istc.cnr.it/arco/) knowledge graph.
 
 The project was based on a step-by-step process that combined <strong>SPARQL exploration</strong>, <strong>gap identification</strong>, <strong>RDF modeling</strong>, <strong>vocabulary extension</strong> and the use of <strong>Large Language Models</strong>.
 
@@ -31,21 +31,13 @@ The project was based on a step-by-step process that combined <strong>SPARQL exp
 
 We selected [**Tempio Malatestiano**](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html), an architectural heritage resource located in Rimini, Italy.
 
-This resource was chosen because it is a complex cultural heritage object. It is connected not only to architecture, but also to historical figures, artistic objects, internal chapels and symbolic elements.
-
-For this reason, it is a suitable case for exploring how cultural heritage information is represented in a knowledge graph and how this representation can be enriched.
+This resource was chosen because it is a complex cultural heritage object. It is connected not only to architecture, but also to historical figures and artistic objects.
 
 ---
 
 ### 2. Exploring the ArCo knowledge graph
 
-The first step of the analysis was to explore the ArCo knowledge graph through the official SPARQL endpoint.
-
-We searched for the main resource describing Tempio Malatestiano and analysed its RDF description.
-
-The selected resource is:
-
-(https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html)
+The first step of the analysis was to explore the ArCo knowledge graph through the official SPARQL endpoint. We searched for the main resource describing Tempio Malatestiano and analysed its RDF description.
 
 The initial queries were used to retrieve:
 
@@ -60,15 +52,7 @@ The initial queries were used to retrieve:
 ### 3. Analysing the direct RDF description
 
 After identifying the main resource, we analysed which information was directly connected to it through RDF properties.
-
 This step was important because the goal of the project was not only to find information about <strong>Tempio Malatestiano</strong>, but also to understand how this information is structured in the knowledge graph.
-
-In particular, we checked whether the main resource directly represented:
-
-- internal architectural components;
-- historical figures;
-- artistic objects;
-- heraldic or symbolic elements.
 
 ---
 
