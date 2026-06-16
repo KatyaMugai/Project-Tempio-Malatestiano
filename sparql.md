@@ -58,7 +58,7 @@ LIMIT 50
 <h3>Results</h3>
 
 <p>
-  The query confirmed that ArCo contains a resource corresponding to Tempio Malatestiano.
+  The query confirmed that ArCo <strong>contains a resource</strong> corresponding to Tempio Malatestiano.
 </p>
 
 <p>
@@ -70,7 +70,7 @@ LIMIT 50
 </p>
 
 <p>
-  This resource became the main subject of the following SPARQL exploration.
+  This resource became the <strong>main subject</strong> of the following SPARQL exploration.
 </p>
 
 <hr>
@@ -78,7 +78,7 @@ LIMIT 50
 <h2>Query 2 — Exploring the direct RDF description</h2>
 
 <p>
-  After identifying the main resource, we explored its direct RDF description. The goal was to understand which properties and values are directly connected to the main resource.
+  After identifying the main resource, we explored its direct RDF description. The goal was to understand which <strong>properties and values are directly connected</strong> to the main resource.
 </p>
 
 <h3>Explanation of keywords used</h3>
@@ -114,7 +114,7 @@ LIMIT 100
 </p>
 
 <p>
-  However, the direct RDF description did not provide a detailed structured representation of the internal architectural components of the monument or of the historical and artistic entities associated with it.
+  However, the direct RDF description <strong>did not provide a detailed structured representation</strong> of the internal architectural components of the monument or of the historical and artistic entities associated with it.
 </p>
 
 <hr>
