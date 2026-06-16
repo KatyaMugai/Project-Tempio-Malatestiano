@@ -1,6 +1,7 @@
 layout	default
 title	Identifying Gaps
 Home | Topic | Methodology | SPARQL Results | Identifying Gaps | LLM Prompts | RDF Triples | Vocabulary Extension | Challenges | Conclusion
+
 we are working on a project to enrich a cultural heritage knowledge graph using RDF triples. We need to verify whether there is a historical relationship between a spesific person and a monument. Can you answer the final question the same style? 
 Q: Is there a historical link between Federico II and the Castello Svevo of Bari? 
 A: Yes. The Castello Svevo of Bari was built by Emperor Frederick II in 1233. He turned it into a fortitied castle, and it served as an important part of his defensive system in Southern Italy. 
