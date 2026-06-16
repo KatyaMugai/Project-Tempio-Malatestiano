@@ -18,6 +18,10 @@ title: Challenges
 
 ---
 
+# Challenges
+
+---
+
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="vocabulary-extension.html">← Previous</a>
   <a href="conclusion.html">Next →</a>
