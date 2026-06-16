@@ -18,6 +18,10 @@ title: RDF Triples
 
 ---
 
+# RDF Triples
+
+---
+
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="llms.html">← Previous</a>
   <a href="vocabulary-extension.html">Next →</a>
