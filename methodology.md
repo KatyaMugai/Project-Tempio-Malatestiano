@@ -93,7 +93,7 @@ However, these entities are not directly connected to the main architectural res
 
 Large Language Models were used as support tools during the project.
 
-We tested models such as <strong>ChatGPT</strong> and <strong>Gemini</strong> in order to see whether they could help interpret the identified gaps and suggest possible enrichment strategies.
+We tested models such as <strong>ChatGPT</strong> and <strong>Gemini</strong> in order to see whether they could answer some questions concerning Tempio, help interpret the identified gaps and suggest possible enrichment strategies.
 
 Different prompting techniques were used, including:
 
@@ -102,8 +102,6 @@ Different prompting techniques were used, including:
 - few-shot chain-of-thought prompting.
 
 The answers produced by the models were compared with the evidence obtained through SPARQL queries.
-
-The LLMs were not used as the only source of knowledge. Their role was to support interpretation and reflection, while the actual evidence came from the RDF data and SPARQL results.
 
 ---
 
@@ -121,43 +119,20 @@ The proposed enrichment aims to transform information that was previously implic
 
 ### 8. Creating a vocabulary extension
 
-Some of the required relations were not sufficiently represented by the existing vocabulary.
-
-For this reason, we proposed a small local vocabulary extension using the namespace:
+Some of the required relations were not sufficiently represented by the existing vocabulary. For this reason, we proposed a small local vocabulary extension using the namespace:
 
 <p>
   <code>@prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .</code>
 </p>
 
-The vocabulary extension introduces:
-
-- new classes;
-- new resources;
-- new properties;
-- labels;
-- comments;
-- domains;
-- ranges.
-
-This makes the proposed enrichment more precise and semantically explicit.
+The vocabulary extension several concepts, which makes the proposed enrichment more precise and semantically explicit.
 
 ---
 
 ### 9. Publishing the project website
 
 The final step was to publish the project as a website using <strong>GitHub Pages</strong>.
-
-The website presents the main parts of the project:
-
-- the selected topic;
-- the methodology;
-- the SPARQL exploration;
-- the identified gaps;
-- the RDF enrichment;
-- the vocabulary extension;
-- the LLM prompts;
-- the challenges;
-- the conclusion.
+The website presents the main parts of the project to present our project in an accessible and visually structured format.
 
 ---
 
@@ -186,18 +161,6 @@ We used <code>SELECT</code> queries to retrieve and analyse existing information
 ### GitHub Pages
 
 <strong>GitHub Pages</strong> was used to publish the project website and organize the work into clear sections.
-
----
-
-## Methodological logic
-
-The central methodological idea of the project was to compare what is explicitly modeled in the RDF graph with what is only implicitly available in textual labels.
-
-In the case of <strong>Tempio Malatestiano</strong>, the ArCo resource already contains many related photographic resources. However, several important pieces of information appear only in the labels of those resources.
-
-The enrichment therefore aims to transform implicit textual information into explicit, structured and machine-readable RDF triples.
-
-This process makes the knowledge graph more precise, more searchable and more useful for cultural heritage research.
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="topic.html">Previous</a>
