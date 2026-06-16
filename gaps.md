@@ -202,7 +202,11 @@ While the first part of the query retrieves the construction elements directly c
 <p>
   The result shows that several internal chapels, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>, are repeatedly mentioned in photographic resource labels.
 Therefore, the first gap is confirmed: information about the internal architectural structure of the monument exists in ArCo, but it is not represented at the right semantic level.
-The internal chapels are present only indirectly in textual labels, while the main architectural resource directly models only the facade as a construction element. To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
+The internal chapels are present only indirectly in textual labels, while the main architectural resource directly models only the facade as a construction element. 
+</p>
+
+<p>
+To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
 </p>
 
 <h2>2. Identification of the Second Gap</h2>
