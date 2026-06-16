@@ -91,11 +91,7 @@ LIMIT 100
 <h3>Interpretation</h3>
 
 <p>
-  This result shows that, in the direct RDF description, only the facade is explicitly modeled as a construction element of <strong>Tempio Malatestiano</strong>.
-</p>
-
-<p>
-  However, the monument is architecturally more complex and contains several internal chapels. Therefore, we needed to check whether these elements appeared elsewhere in the ArCo data.
+  This result shows that, in the direct RDF description, <strong>only the facade is explicitly modeled as a construction element</strong> of Tempio Malatestiano. However, the monument is architecturally more complex and contains several internal chapels. Therefore, we needed to check <strong>whether these elements appeared elsewhere</strong> in the ArCo data.
 </p>
 
 <hr>
@@ -170,23 +166,11 @@ ORDER BY DESC(?numberOfPhotos)
 <h3>Final consideration for Gap 1</h3>
 
 <p>
-  The query results show that several internal chapels are repeatedly mentioned in the labels of photographic resources associated with Tempio Malatestiano.
+  The query results show that several internal chapels are repeatedly mentioned in the labels of photographic resources associated with Tempio Malatestiano, which means that the information exists in the ArCo dataset, but it is not represented at the right semantic level.
 </p>
 
 <p>
-  This means that the information exists in the ArCo dataset, but it is not represented at the right semantic level.
-</p>
-
-<p>
-  The internal chapels are present only indirectly, through textual labels of photographic resources, while the main architectural resource directly models only the facade as a construction element.
-</p>
-
-<p>
-  Therefore, the first gap is the missing structured representation of internal architectural components.
-</p>
-
-<p>
-  To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
+  Therefore, the first gap is the missing structured representation of internal architectural components. To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
 </p>
 
 <hr>
@@ -200,11 +184,7 @@ ORDER BY DESC(?numberOfPhotos)
 </p>
 
 <p>
-  During the exploration of related photographic resources, we noticed that their labels mention several important figures and elements connected to the monument.
-</p>
-
-<p>
-  These include historical persons, artistic objects and heraldic elements.
+  During the exploration of related photographic resources, we noticed that their labels mention several important figures and elements connected to the monument. These include historical persons, artistic objects and heraldic elements.
 </p>
 
 <h3>Query 5 — Finding historical and artistic entities in photographic resources</h3>
@@ -350,15 +330,7 @@ LIMIT 100
 <h3>Final consideration for Gap 2</h3>
 
 <p>
-  The absence of results confirms that the selected historical and artistic entities are not directly connected to the main Tempio Malatestiano resource through structured RDF properties.
-</p>
-
-<p>
-  They appear mainly in the labels of related photographic resources.
-</p>
-
-<p>
-  Therefore, the second gap is the missing structured representation of historical and artistic entities associated with the monument.
+  The absence of results confirms that the <strong>selected historical and artistic entities are not directly connected</strong> to the main Tempio Malatestiano resource through structured RDF properties and they appear mainly in the labels of related photographic resources.
 </p>
 
 <p>
@@ -370,11 +342,7 @@ LIMIT 100
 <h2>Final conclusion</h2>
 
 <p>
-  The gap identification process showed that Tempio Malatestiano is already well documented in ArCo, especially through photographic resources.
-</p>
-
-<p>
-  However, some important information is only implicit. Internal chapels, historical figures, artistic objects and heraldic elements appear in textual labels, but they are not directly represented as RDF relations of the main architectural resource.
+  The gap identification process showed that Tempio Malatestiano is well documented in ArCo, especially through photographic resources. However, some important information is only implicit. Internal chapels, historical figures, artistic objects and heraldic elements appear in textual labels, but they are <strong>not directly represented as RDF relations</strong> of the main architectural resource.
 </p>
 
 <p>
