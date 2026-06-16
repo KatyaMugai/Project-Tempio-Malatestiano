@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Methodology
+title: LLM Models
 ---
 
 
@@ -45,6 +45,6 @@ A: Yes. Leon Battista Alberti had a major architectural connection to the Tempio
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
-  <a href="index.html">← Previous</a>
-  <a href="methodology.html">Next →</a>
+  <a href="gaps.html">← Previous</a>
+  <a href="rdf-enrichment.html">Next →</a>
 </div>
