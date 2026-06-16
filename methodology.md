@@ -29,7 +29,7 @@ The project was based on a step-by-step process that combined <strong>SPARQL exp
 
 ### 1. Selecting the topic
 
-We selected <strong>Tempio Malatestiano</strong>, an architectural heritage resource located in Rimini, Italy.
+We selected Tempio Malatestiano, an architectural heritage resource located in Rimini, Italy.
 
 This resource was chosen because it is a complex cultural heritage object. It is connected not only to architecture, but also to historical figures, artistic objects, internal chapels and symbolic elements.
 
