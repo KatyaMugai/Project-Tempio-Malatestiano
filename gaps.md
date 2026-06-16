@@ -99,35 +99,57 @@ LIMIT 100
 <h3>Query 4 — Looking for internal chapels in photographic resources</h3>
 
 <p>
-  Since the direct RDF description returned only the facade, we analysed the photographic resources linked to Tempio Malatestiano through <code>rdfs:seeAlso</code>.
+  Since the direct RDF description returned only the facade as a construction element, we analysed the photographic resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>.
 </p>
 
 <p>
-  The purpose of this query was to verify whether internal chapels are mentioned in the labels of related photographic resources.
+  In this query, we used <code>UNION</code> to compare two types of information in one query:
+</p>
+
+<ul>
+  <li>construction elements directly connected to the main Tempio Malatestiano resource;</li>
+  <li>internal chapels mentioned only in the labels of related photographic resources.</li>
+</ul>
+
+<p>
+  The purpose of the query was to verify whether internal architectural elements are explicitly modeled as construction elements or only indirectly mentioned in photographic resource labels.
 </p>
 
 <pre><code>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX cdesc: &lt;https://w3id.org/arco/ontology/construction-description/&gt;
 
-SELECT ?elementName (COUNT(DISTINCT ?photo) AS ?numberOfPhotos)
+SELECT ?source ?elementName (COUNT(DISTINCT ?item) AS ?numberOfResources)
 WHERE {
   VALUES ?cp { &lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt; }
 
-  ?cp rdfs:seeAlso ?photo .
-  ?photo rdfs:label ?photoLabel .
+  {
+    ?cp cdesc:hasConstructionElement ?item .
+    BIND("Direct construction element" AS ?source)
+    BIND("Facade" AS ?elementName)
+  }
 
-  BIND(
-    IF(REGEX(STR(?photoLabel), "Cappella degli Antenati", "i"), "Cappella degli Antenati",
-    IF(REGEX(STR(?photoLabel), "Cappella degli Angeli", "i"), "Cappella degli Angeli",
-    IF(REGEX(STR(?photoLabel), "Cappella delle Virt", "i"), "Cappella delle Virtù / S. Sigismondo",
-    IF(REGEX(STR(?photoLabel), "Cappella dello Zodiaco", "i"), "Cappella dello Zodiaco",
-    IF(REGEX(STR(?photoLabel), "Cappella d.Isotta", "i"), "Cappella d'Isotta",
-    ""))))) AS ?elementName
-  )
+  UNION
 
-  FILTER(?elementName != "")
+  {
+    ?cp rdfs:seeAlso ?item .
+    ?item rdfs:label ?photoLabel .
+
+    BIND("Photographic resource label" AS ?source)
+
+    BIND(
+      IF(REGEX(STR(?photoLabel), "Cappella degli Antenati", "i"), "Cappella degli Antenati",
+      IF(REGEX(STR(?photoLabel), "Cappella degli Angeli", "i"), "Cappella degli Angeli",
+      IF(REGEX(STR(?photoLabel), "Cappella delle Virt", "i"), "Cappella delle Virtù / S. Sigismondo",
+      IF(REGEX(STR(?photoLabel), "Cappella dello Zodiaco", "i"), "Cappella dello Zodiaco",
+      IF(REGEX(STR(?photoLabel), "Cappella d.Isotta", "i"), "Cappella d'Isotta",
+      ""))))) AS ?elementName
+    )
+
+    FILTER(?elementName != "")
+  }
 }
-GROUP BY ?elementName
-ORDER BY DESC(?numberOfPhotos)
+GROUP BY ?source ?elementName
+ORDER BY ?source DESC(?numberOfResources)
 </code></pre>
 
 <h3>Result</h3>
@@ -135,28 +157,39 @@ ORDER BY DESC(?numberOfPhotos)
 <table>
   <thead>
     <tr>
+      <th>Source</th>
       <th>Architectural element</th>
-      <th>Number of photographic resources</th>
+      <th>Number of resources</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>Direct construction element</td>
+      <td>Facade</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Photographic resource label</td>
       <td>Cappella delle Virtù / S. Sigismondo</td>
       <td>54</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella dello Zodiaco</td>
       <td>43</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella degli Angeli</td>
       <td>28</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella degli Antenati</td>
       <td>26</td>
     </tr>
     <tr>
+      <td>Photographic resource label</td>
       <td>Cappella d'Isotta</td>
       <td>1</td>
     </tr>
@@ -166,14 +199,28 @@ ORDER BY DESC(?numberOfPhotos)
 <h3>Final consideration for Gap 1</h3>
 
 <p>
-  The query results show that several internal chapels are repeatedly mentioned in the labels of photographic resources associated with Tempio Malatestiano, which means that the information exists in the ArCo dataset, but it is not represented at the right semantic level.
+  The use of <code>UNION</code> makes it possible to compare structured RDF data and implicit textual information within the same query.
 </p>
 
 <p>
-  Therefore, the first gap is the missing structured representation of internal architectural components. To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
+  The first part of the query retrieves the construction elements directly connected to the main <strong>Tempio Malatestiano</strong> resource through <code>cdesc:hasConstructionElement</code>. This part returns only the <strong>facade</strong>.
 </p>
 
-<hr>
+<p>
+  The second part of the query retrieves related photographic resources through <code>rdfs:seeAlso</code> and searches their labels for the names of internal chapels.
+</p>
+
+<p>
+  The result shows that several internal chapels, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>, are repeatedly mentioned in photographic resource labels.
+</p>
+
+<p>
+  Therefore, the first gap is confirmed: information about the internal architectural structure of the monument exists in ArCo, but it is not represented at the right semantic level.
+</p>
+
+<p>
+  The internal chapels are present only indirectly in textual labels, while the main architectural resource directly models only the facade as a construction element. To enrich the graph, we propose adding direct <code>cdesc:hasConstructionElement</code> relations from Tempio Malatestiano to the main internal chapels identified in the photographic resources.
+</p>
 
 <h2>2. Identification of the Second Gap</h2>
 
