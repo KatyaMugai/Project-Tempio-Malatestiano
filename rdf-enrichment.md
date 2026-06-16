@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tempio Malatestiano
+title: RDF Triples
 ---
 
 <div style="text-align: center; margin-bottom: 20px;">
@@ -19,6 +19,6 @@ title: Tempio Malatestiano
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
-  <a href="index.html">← Previous</a>
-  <a href="methodology.html">Next →</a>
+  <a href="llms.html">← Previous</a>
+  <a href="vocabulary-extension.html">Next →</a>
 </div>
