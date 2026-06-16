@@ -18,6 +18,10 @@ title: Conclusion
 
 ---
 
+# Conclusion
+
+---
+
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="challenges.html">← Previous</a>
 </div>
