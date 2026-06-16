@@ -2,7 +2,6 @@
 layout: default
 title: Tempio Malatestiano
 ---
-
   <h3 style="text-align: center;">Sections:</h3>
 <div style="text-align: center; margin-bottom: 20px;">
   <a href="index.html">Home</a> |
