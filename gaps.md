@@ -30,11 +30,8 @@ title: Identifying Gaps
   The selected ArCo resource is:
 </p>
 
-<p>
-  <code style="white-space: normal; word-break: break-all; overflow-wrap: anywhere;">
-    https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
-  </code>
-</p>
+<pre><code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+  </code></pre>
 
 <hr>
 
