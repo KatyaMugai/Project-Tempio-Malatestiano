@@ -1,6 +1,6 @@
 ---
 layout: default
-title: LLM Models
+title: LLM Prompts
 ---
 
 
