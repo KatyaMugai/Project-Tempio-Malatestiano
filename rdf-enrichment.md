@@ -15,3 +15,10 @@ title: Tempio Malatestiano
   <a href="challenges.html">Challenges</a> |
   <a href="conclusion.html">Conclusion</a>
 </div>
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 2em;">
+  <a href="index.html">← Previous</a>
+  <a href="methodology.html">Next →</a>
+</div>
