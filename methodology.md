@@ -60,7 +60,7 @@ This step was important because the goal of the project was not only to find inf
 
 The next step was to analyse the resources linked to <strong>Tempio Malatestiano</strong> through <code>rdfs:seeAlso</code>.
 
-These related resources were especially important because many of them are photographic documentation resources and we discovered the labels of these photographic resources contained relevant information that was not directly represented as structured RDF relations of the main resource.
+These related resources were especially important because many of them are photographic documentation resources, and their labels contained relevant information that was not directly represented as structured RDF relations of the main resource.
 
 ---
 
