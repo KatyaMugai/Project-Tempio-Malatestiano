@@ -79,8 +79,11 @@ Include all nacessary prefixes.
 <img width="928" height="757" alt="image" src="https://github.com/user-attachments/assets/03b7eca3-ae6c-4070-bd6e-8665b2ab8bb7" />
 <img width="818" height="617" alt="image" src="https://github.com/user-attachments/assets/cf38f09b-aadf-40aa-9b68-8f476d121f59" />
 
+
 Sixth RDF Triple
 Cultural Events – Zero-Shot Prompt
+
+
 We are working with the ArCo and CIS ontologies and need to represent that a cultural property is involved in a cultural event.
 Please generate:
 a SPARQL CONSTRUCT query
