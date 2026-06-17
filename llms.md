@@ -80,7 +80,7 @@ Include all nacessary prefixes.
 <img width="818" height="617" alt="image" src="https://github.com/user-attachments/assets/cf38f09b-aadf-40aa-9b68-8f476d121f59" />
 
 
-Sixth RDF Triple
+Forth RDF Triple
 
 Cultural Events – Zero-Shot Prompt
 
@@ -97,7 +97,7 @@ Make sure to use the correct prefixes and return only the CONSTRUCT query and th
 
 <img width="786" height="717" alt="image" src="https://github.com/user-attachments/assets/4fa4c5e2-d29e-4cb8-b67e-99995562a3e2" />
 
-Seventh RDF Triple
+Fifth RDF Triple
 Connection to Leon Battista Alberti – Zero-Shot Prompt
 
 We are working on a cultural heritage knowledge graph using SPARQL.
