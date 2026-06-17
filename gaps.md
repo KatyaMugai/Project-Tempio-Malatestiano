@@ -361,7 +361,7 @@ LIMIT 100
 </p>
 
 <p>
-  To enrich the graph, we propose adding new RDF relations connecting Tempio Malatestiano to associated historical persons, artistic objects and heraldic elements.
+  To enrich the graph, we propose adding new RDF triples that connect Tempio Malatestiano to these entities by reusing existing ArCo properties. Historical figures can be linked through <code>core:involvesAgent</code>, the Crocifisso giottesco through <code>a-dd:hasAssociatedObject</code>, and the Stemma Malatesta through <code>a-dd:hasElementAffixedToCulturalProperty</code>.
 </p>
 
 <hr>
