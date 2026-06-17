@@ -106,11 +106,11 @@ The answers produced by the models were compared with the evidence obtained thro
 
 ### 7. Proposing RDF triples
 
-After identifying the gaps, we **proposed new RDF triples** to enrich the knowledge graph. The goal was not to create new properties, but to make implicit information explicit by reusing existing vocabulary from ArCo and related RDF vocabularies whenever possible.
+After identifying the gaps, **we proposed new RDF triples** to enrich the knowledge graph. The goal was not to create new properties, but to make implicit information explicit by reusing existing vocabulary from ArCo and related RDF vocabularies whenever possible.
 
-For the first gap, we proposed adding direct links between **Tempio Malatestiano** and its internal chapels using the [existing ArCo property](http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/construction-description/construction-description.owl) <code>cdesc:hasConstructionElement</code>. For the second gap, we initially considered creating local properties to connect the monument with historical and artistic entities. However, after checking the existing ArCo ontology modules, we decided to reuse already available properties instead.
+For the **first gap**, we proposed adding direct links between **Tempio Malatestiano** and its internal chapels using the [existing ArCo property](http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/construction-description/construction-description.owl) <code>cdesc:hasConstructionElement</code>. For the **second gap**, we initially considered creating local properties to connect the monument with historical and artistic entities. However, after checking the existing ArCo ontology modules, we decided to reuse already available properties instead.
 
-In the final RDF enrichment, historical figures are linked through the existing [ArCo Core property](http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl) <code>core:involvesAgent</code>. The Crocifisso giottesco is represented through <code>a-dd:hasAssociatedObject</code>, and the Stemma Malatesta is represented through <code>a-dd:hasElementAffixedToCulturalProperty</code>.
+In the final RDF enrichment, historical figures are linked through the [existing ArCo Core property](http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl) <code>core:involvesAgent</code>. The Crocifisso giottesco is represented through <code>a-dd:hasAssociatedObject</code>, and the Stemma Malatesta is represented through <code>a-dd:hasElementAffixedToCulturalProperty</code>.
 
 The enrichment aims to transform information that was previously implicit in photographic resource labels into explicit, structured and directly queryable RDF triples.
 
@@ -118,7 +118,7 @@ The enrichment aims to transform information that was previously implicit in pho
 
 ### 8. Publishing the project website
 
-The final step was to publish the project as a website using <strong>GitHub Pages</strong>.
+The final step was to publish the project as a website using [**GitHub Pages**](https://docs.github.com/en/pages).
 The website presents the main parts of the project to present our project in an accessible and visually structured format.
 
 ---
