@@ -271,7 +271,7 @@ ex:StemmaMalatesta
 
 <hr>
 
-<h2>Why these triples improve the knowledge graph</h2>
+<h2>Why these triples improve the knowledge graph?</h2>
 
 <p>
   The proposed enrichment improves the representation of Tempio Malatestiano by transforming information that was previously implicit in textual labels into explicit RDF triples.
@@ -298,15 +298,7 @@ ex:StemmaMalatesta
 </ul>
 
 <p>
-  Compared to the initial modelling proposal, this version is more aligned with the ArCo ontology. Instead of introducing new local properties such as <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> or <code>ex:hasHeraldicElement</code>, the enrichment reuses already existing properties from ArCo and ArCo Core.
-</p>
-
-<p>
-  The only local resources introduced in the graph are the specific entities that were missing as direct structured resources in the original RDF description, such as the chapels, Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta.
-</p>
-
-<p>
-  As a result, the enriched graph becomes more precise, more searchable and more reusable for cultural heritage research.
+  The only local resources introduced in the graph are the specific entities that were missing as direct structured resources in the original RDF description, such as the chapels, Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta. As a result, the enriched graph becomes more precise, more searchable and more reusable for cultural heritage research.
 </p>
 
 <hr>
