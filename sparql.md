@@ -58,6 +58,8 @@ LIMIT 50
 
 <h3>Results</h3>
 
+<img src="assets/images/q1.png" alt="SPARQL Query 1 results" style="max-width: 100%;">
+
 <p>
   The query confirmed that ArCo <strong>contains a resource</strong> corresponding to Tempio Malatestiano.
 </p>
