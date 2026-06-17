@@ -64,6 +64,20 @@ Predicate: arco:hasDating
 Object: 1450              
 First, provide the CONSTRUCT query, then the RDF triple in Turtle syntax. Include all necessary PREFIX declarifications.
 
+Third RDF triple
+Let’s think step by step.
+1. We are working with RDF triples using the ArCo ontology.
+2. We want to indicate that the Tempio Malatestiano was commissioned by the Comune di Rimini.
+3. The subject is the Tempio Malatestiano, whose IRI is: https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+
+4. The predicate is the ArCo property used to express who commissioned a cultural heritage site:a-cd:hasCommittent
+5. The object is the Comune di Rimini, which exists in ArCo with the following IRI:: <https://w3id.org/arco/resource/Agent/d801d3392b7a87fb2af08> 
+Now:
+First, write a SPARQL CONSTRUCT query to generate this triple.
+Then, write the resulting triple in Turtle syntax.
+Include all nacessary prefixes.
+<img width="928" height="757" alt="image" src="https://github.com/user-attachments/assets/03b7eca3-ae6c-4070-bd6e-8665b2ab8bb7" />
+<img width="818" height="617" alt="image" src="https://github.com/user-attachments/assets/cf38f09b-aadf-40aa-9b68-8f476d121f59" />
 
 
 ---
