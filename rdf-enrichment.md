@@ -61,10 +61,10 @@ title: RDF Enrichment
 
 <ul>
   <li>
-    <strong>Gap 1:</strong> internal architectural components are mentioned in photographic resource labels, but they are not directly modeled as construction elements of the main architectural resource.
+    <strong>Gap 1:</strong> <strong>internal architectural components</strong> are mentioned in photographic resource labels, but they are not directly modeled as construction elements of the main architectural resource.
   </li>
   <li>
-    <strong>Gap 2:</strong> historical and artistic entities associated with Tempio Malatestiano are mentioned in photographic resource labels, but they are not directly linked to the main resource through structured RDF properties.
+    <strong>Gap 2:</strong> <strong>historical and artistic entities</strong> associated with Tempio Malatestiano are mentioned in photographic resource labels, but they are not directly linked to the main resource through structured RDF properties.
   </li>
 </ul>
 
@@ -77,11 +77,7 @@ title: RDF Enrichment
 <h2>1. Enrichment for Gap 1: Internal architectural components</h2>
 
 <p>
-  The first gap concerns the internal architectural structure of Tempio Malatestiano.
-</p>
-
-<p>
-  The original RDF description directly represents only the facade as a construction element. However, related photographic resources repeatedly mention several internal chapels, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>.
+  The first gap concerns the internal architectural structure of Tempio Malatestiano. The original RDF description directly represents only the facade as a construction element. However, related photographic resources repeatedly mention several internal chapels, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>.
 </p>
 
 <p>
@@ -118,28 +114,14 @@ WHERE { }
 <h3>Interpretation</h3>
 
 <p>
-  These triples make explicit the internal architectural structure of Tempio Malatestiano.
-</p>
-
-<p>
-  Instead of leaving the chapels only in textual labels of photographic resources, the proposed enrichment models them as construction elements of the main architectural heritage resource.
-</p>
-
-<p>
-  This improves the semantic granularity of the knowledge graph and makes the internal chapels directly searchable through SPARQL.
+  These triples make explicit the internal architectural structure of Tempio Malatestiano. Instead of leaving the chapels only in textual labels of photographic resources, <strong>the proposed enrichment models them as construction elements of the main architectural heritage resource</strong>. This improves the semantic granularity of the knowledge graph and makes the internal chapels directly searchable through SPARQL.
 </p>
 
 <hr>
 
 ## 2. Enrichment for Gap 2: Historical and artistic entities
 
-The second gap concerns historical and artistic entities associated with Tempio Malatestiano.
-
-SPARQL exploration showed that related photographic resources mention several relevant entities, including Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta.
-
-However, these entities are not directly linked to the main Tempio Malatestiano resource through structured RDF properties.
-
-For this reason, the enrichment reuses existing ArCo and ArCo Core properties instead of introducing new local properties.
+The second gap concerns historical and artistic entities associated with Tempio Malatestiano. SPARQL exploration showed that related photographic resources mention several relevant entities, including Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta. However, these entities are not directly linked to the main Tempio Malatestiano resource through structured RDF properties.
 
 ### Vocabulary reused for Gap 2
 
@@ -217,7 +199,6 @@ For this reason, the enrichment reuses existing ArCo and ArCo Core properties in
 ### Interpretation
 
 These triples make explicit the connection between Tempio Malatestiano and historical or artistic entities that were previously mentioned only in the labels of related photographic resources.
-
 The enrichment does not introduce new local properties for Gap 2. Instead, it reuses existing properties from ArCo Core and ArCo denotative-description.
 
 The historical figures are connected to the monument through <code>core:involvesAgent</code>.
