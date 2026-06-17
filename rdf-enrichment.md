@@ -396,7 +396,6 @@ WHERE {
 <p>
   This makes the proposed enrichment less artificial and more consistent with the modelling choices already available in ArCo.
 </p>
-</hr>
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="llms.html">Previous</a>
