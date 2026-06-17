@@ -79,6 +79,20 @@ Include all nacessary prefixes.
 <img width="928" height="757" alt="image" src="https://github.com/user-attachments/assets/03b7eca3-ae6c-4070-bd6e-8665b2ab8bb7" />
 <img width="818" height="617" alt="image" src="https://github.com/user-attachments/assets/cf38f09b-aadf-40aa-9b68-8f476d121f59" />
 
+Sixth RDF Triple
+Cultural Events – Zero-Shot Prompt
+We are working with the ArCo and CIS ontologies and need to represent that a cultural property is involved in a cultural event.
+Please generate:
+a SPARQL CONSTRUCT query
+and the corresponding RDF triple in Turtle syntax
+Subject: <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800242914>
+Predicate: cis:isInvolvedInCulturalEvent
+Object: <https://w3id.org/arco/resource/Event/eve-s56-rsef18b>
+Make sure to use the correct prefixes and return only the CONSTRUCT query and the Turtle triple
+<img width="755" height="733" alt="image" src="https://github.com/user-attachments/assets/87db07bd-db46-4de5-97be-aef97ab181c7" />
+
+<img width="786" height="717" alt="image" src="https://github.com/user-attachments/assets/4fa4c5e2-d29e-4cb8-b67e-99995562a3e2" />
+
 
 ---
 
