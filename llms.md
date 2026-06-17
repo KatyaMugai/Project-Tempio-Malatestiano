@@ -81,6 +81,7 @@ Include all nacessary prefixes.
 
 
 Sixth RDF Triple
+
 Cultural Events – Zero-Shot Prompt
 
 
