@@ -213,7 +213,7 @@ The internal chapels are present only indirectly in textual labels, while the ma
 <h3>Missing structured links to historical and artistic entities</h3>
 
 <p>
-  The second gap concerns historical and artistic entities associated with <strong>Tempio Malatestiano</strong>.
+  The second gap concerns <strong>historical and artistic entities</strong> associated with <strong>Tempio Malatestiano</strong>.
 </p>
 
 <p>
