@@ -57,6 +57,7 @@ We are working on a cultural heritage knowledge graph using SPARQL.
 The Tempio Malatestiano in Rimini was build in 1450.  This is the commonly cited year for Leon Battista Alberti’s commission and the start of the major Renaissance transformation (reconstruction of the earlier Gothic Church of San Francesco)
 Please write a SPARQL CONSTRUCT query that creates an RDF triple with:
 Subject: https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
+
 Predicate: arco:hasDating
 Object: 1450              
 First, provide the CONSTRUCT query, then the RDF triple in Turtle syntax. Include all necessary PREFIX declarifications.
