@@ -12,7 +12,6 @@ title: Conclusion
   <a href="gaps.html">Identifying Gaps</a> |
   <a href="llms.html">LLM Prompts</a> |
   <a href="rdf-enrichment.html">RDF Triples</a> |
-  <a href="vocabulary-extension.html">Vocabulary Extension</a> |
   <a href="challenges.html">Challenges</a> |
   <a href="conclusion.html">Conclusion</a>
 </div>
