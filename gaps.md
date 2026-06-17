@@ -71,6 +71,10 @@ LIMIT 100
 
 <h3>Result</h3>
 
+<a href="assets/images/q3.png" target="_blank">
+  Open screenshot of Query 3 results
+</a>
+
 <p>
   The query returned only one construction element:
 </p>
@@ -149,6 +153,10 @@ ORDER BY ?source DESC(?numberOfResources)
 </code></pre>
 
 <h3>Result</h3>
+
+<a href="assets/images/q4.png" target="_blank">
+  Open screenshot of Query 4 results
+</a>
 
 <table>
   <thead>
@@ -255,6 +263,10 @@ ORDER BY DESC(?numberOfPhotos)
 
 <h3>Result</h3>
 
+<a href="assets/images/q5.png" target="_blank">
+  Open screenshot of Query 5 results
+</a>
+
 <table>
   <thead>
     <tr>
@@ -360,6 +372,8 @@ LIMIT 100
 <p>
   The query returned no results.
 </p>
+
+<img src="assets/images/q6.png" alt="SPARQL Query 6 results" style="max-width: 100%;">
 
 <h3>Final consideration for Gap 2</h3>
 
