@@ -213,11 +213,7 @@ The internal chapels are present only indirectly in textual labels, while the ma
 <h3>Missing structured links to historical and artistic entities</h3>
 
 <p>
-  The second gap concerns <strong>historical and artistic entities</strong> associated with <strong>Tempio Malatestiano</strong>.
-</p>
-
-<p>
-  During the exploration of related photographic resources, we noticed that their labels mention several important figures and elements connected to the monument. These include historical persons, artistic objects and heraldic elements.
+  The second gap concerns <strong>historical and artistic entities</strong> associated with <strong>Tempio Malatestiano</strong>. During the exploration of related photographic resources, we noticed that their <strong>labels mention several important figures and elements</strong> connected to the monument. These include historical persons, artistic objects and heraldic elements.
 </p>
 
 <h3>Query 5 — Finding historical and artistic entities in photographic resources</h3>
@@ -296,11 +292,7 @@ ORDER BY DESC(?numberOfPhotos)
 <h3>Interpretation</h3>
 
 <p>
-  The results show that several historical and artistic entities are present in the labels of photographic resources.
-</p>
-
-<p>
-  The most relevant entities for the enrichment are:
+  The results show that <strong>several historical and artistic entities are present</strong> in the labels of photographic resources. The most relevant entities for the enrichment are:
 </p>
 
 <ul>
@@ -311,7 +303,7 @@ ORDER BY DESC(?numberOfPhotos)
 </ul>
 
 <p>
-  However, at this stage, these entities were still found only in photographic labels. Therefore, we needed to verify whether they were already directly connected to the main Tempio Malatestiano resource.
+  However, at this stage, these entities were still <strong>found only in photographic labels</strong>. Therefore, we needed to verify whether they were already directly connected to the main Tempio Malatestiano resource.
 </p>
 
 <hr>
@@ -319,11 +311,7 @@ ORDER BY DESC(?numberOfPhotos)
 <h3>Query 6 — Checking whether these entities are directly linked</h3>
 
 <p>
-  To verify whether the selected historical and artistic entities were already directly linked to the main architectural resource, we ran another query excluding <code>rdfs:seeAlso</code>.
-</p>
-
-<p>
-  This was necessary because <code>rdfs:seeAlso</code> connects the monument to related photographic resources, but it does not directly express historical, artistic or symbolic relations.
+  To verify whether the selected historical and artistic entities were already directly linked to the main architectural resource, we ran another query excluding <code>rdfs:seeAlso</code>. This was necessary because <code>rdfs:seeAlso</code> connects the monument to related photographic resources, but it does not directly express historical, artistic or symbolic relations.
 </p>
 
 <pre><code>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -361,7 +349,7 @@ LIMIT 100
 <h3>Result</h3>
 
 <p>
-  The query returned no results.
+  The query returned <strong>no results</strong>.
 </p>
 
 <img src="assets/images/q6.png" alt="SPARQL Query 6 results" style="max-width: 100%;">
@@ -369,7 +357,7 @@ LIMIT 100
 <h3>Final consideration for Gap 2</h3>
 
 <p>
-  The absence of results confirms that the <strong>selected historical and artistic entities are not directly connected</strong> to the main Tempio Malatestiano resource through structured RDF properties and they appear mainly in the labels of related photographic resources.
+  The absence of results confirms that the <strong>selected historical and artistic entities are not directly connected</strong> to the <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html" target="_blank">main Tempio Malatestiano resource</a> through structured RDF properties and they appear mainly in the labels of related photographic resources.
 </p>
 
 <p>
@@ -381,11 +369,11 @@ LIMIT 100
 <h2>Final conclusion</h2>
 
 <p>
-  The gap identification process showed that Tempio Malatestiano is well documented in ArCo, especially through photographic resources. However, some important information is only implicit. Internal chapels, historical figures, artistic objects and heraldic elements appear in textual labels, but they are <strong>not directly represented as RDF relations</strong> of the main architectural resource.
+  The gap identification process showed that Tempio Malatestiano is well documented in ArCo, especially through photographic resources. However, <strong>some important information is only implicit</strong>. Internal chapels, historical figures, artistic objects and heraldic elements appear in textual labels, but they are not directly represented as RDF relations of the main architectural resource.
 </p>
 
 <p>
-  The proposed enrichment therefore aims to transform this implicit textual information into explicit and machine-readable RDF triples.
+  The proposed enrichment therefore aims to <strong>transform this implicit textual information into explicit and machine-readable RDF triples</strong>.
 </p>
 
 <hr>
