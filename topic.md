@@ -23,7 +23,7 @@ _A Renaissance monument in Rimini_
 
 ## Why Tempio Malatestiano?
 
-**Tempio Malatestiano** is significant for several reasons. It is one of **the most important monuments in Rimini** and represents a complex example of cultural heritage where architecture, history, art and symbolic elements are closely connected.
+[**Tempio Malatestiano**](https://en.wikipedia.org/wiki/Tempio_Malatestiano) is significant for several reasons. It is one of **the most important monuments in Rimini** and represents a complex example of cultural heritage where architecture, history, art and symbolic elements are closely connected.
 
 The building is not only a church, but also a monument associated with Renaissance architectural culture, the Malatesta family, internal chapels, artistic objects and heraldic symbols. For this reason, it is a particularly interesting case for exploring how cultural heritage information is represented in a knowledge graph.
 
@@ -32,9 +32,9 @@ We selected **Tempio Malatestiano** for this project because:
 - It is a complex architectural heritage object with several internal components.
 - It is connected to important historical figures, such as Sigismondo Pandolfo Malatesta and Isotta degli Atti.
 - It contains or is associated with artistic and symbolic elements, such as the Crocifisso giottesco and the Malatesta coat of arms.
-- Its ArCo representation already includes useful information, especially through related photographic resources but some relevant information appears only indirectly in labels and is not represented as explicit RDF relations.
+- Its [**ArCo representation**](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) already includes useful information, especially through related photographic resources but some relevant information appears only indirectly in labels and is not represented as explicit RDF relations.
 
-This makes **Tempio Malatestiano** a suitable case for a knowledge graph enrichment project. The resource is already documented in ArCo, but its semantic representation can be improved by making implicit information more explicit and machine-readable.
+This makes **Tempio Malatestiano** a suitable case for a knowledge graph enrichment project. The resource is already [documented](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) in ArCo, but its semantic representation can be improved by making implicit information more explicit and machine-readable.
 
 ---
 
@@ -42,19 +42,19 @@ This makes **Tempio Malatestiano** a suitable case for a knowledge graph enrichm
 
 The main objectives of this project are:
 
-- To explore the **ArCo knowledge graph** using the official SPARQL endpoint and identify information gaps.
+- To explore the [**ArCo knowledge graph**](http://wit.istc.cnr.it/arco/) using the official [**SPARQL endpoint**](https://dati.cultura.gov.it/sparql) and identify information gaps.
 - To **propose new RDF triples** that could enrich the ArCo Knowledge Graph.
-- To use **Large Language Models**, such as ChatGPT and Gemini, to support the interpretation of the identified gaps and compare their outputs.
+- To use **Large Language Models**, such as [ChatGPT](https://chat.openai.com/) and [Gemini](https://gemini.google.com/?hl=it), to support the interpretation of the identified gaps and compare their outputs.
 
 ---
 
 ## Research Questions
 
 <ul>
-  <li>Which architectural components of Tempio Malatestiano are directly represented in ArCo?</li>
-  <li>Which internal chapels appear only in photographic resource labels?</li>
-  <li>Which historical and artistic entities are associated with Tempio Malatestiano but not directly linked to the main resource?</li>
-  <li>Which RDF triples and vocabulary extensions could make this information explicit?</li>
+  <li>Which architectural components of Tempio Malatestiano are **directly represented** in ArCo?</li>
+  <li>Which internal chapels appear **only in photographic resource labels**?</li>
+  <li>Which historical and artistic entities are associated with Tempio Malatestiano but **not directly linked** to the main resource?</li>
+  <li>Which RDF triples could make this information explicit?</li>
 </ul>
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
