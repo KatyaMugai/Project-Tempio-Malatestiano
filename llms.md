@@ -80,10 +80,6 @@ title: LLM Prompts
   Gemini gave a more detailed architectural analysis, especially of the facade and side arcades. ChatGPT gave a clearer and more compact list of components, which was easier to connect to the structure of our project.
 </p>
 
-<p>
-  However, both answers were too general for the knowledge graph task. They described the monument from general knowledge, but they did not distinguish between what is directly represented in the ArCo RDF description and what appears only indirectly in photographic resource labels.
-</p>
-
 <h3>Evaluation</h3>
 
 <p>
