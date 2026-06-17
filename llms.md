@@ -41,6 +41,9 @@ A: Yes, Leon Battista Alberti had a direct, foundational connection to the Tempi
 
 A: Yes. Leon Battista Alberti had a major architectural connection to the Tempio Malatestiano in Rimini. Around 1450, he designed the Renaissance transformation of the medieval church of San Francesco at the request of Sigismondo Pandolfo Malatesta. Alberti created the classical marble façade and overall architectural scheme, making the Tempio Malatestiano one of the earliest and most influential examples of Renaissance architecture.
 
+First RDF Triple
+Depiction Zero-Shot Promt
+
 
 We are working on a cultural heritage knowledge graph using SPARQL. Generate a SPARQL CONSTRUCKT query and a corresponding RDF  triple in Turtle syntax that links the following agent to a depiction using the foaf:depiction predicate/
 •  Subject — main IRI of Tempio Malatestiano, Rimini https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046 
