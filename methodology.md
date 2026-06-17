@@ -20,7 +20,7 @@ title: Methodology
 
 This section explains the methodology followed in our project to explore and enrich the RDF description of [**Tempio Malatestiano**](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) in the [**ArCo**](http://wit.istc.cnr.it/arco/) knowledge graph.
 
-The project was based on a step-by-step process that combined <strong>SPARQL exploration</strong>, <strong>gap identification</strong>, <strong>RDF modeling</strong>, <strong>vocabulary extension</strong> and the use of <strong>Large Language Models</strong>.
+The project was based on a step-by-step process that combined <strong>SPARQL exploration</strong>, <strong>gap identification</strong>, <strong>RDF modeling</strong> and the use of <strong>Large Language Models</strong>.
 
 ---
 
@@ -28,7 +28,7 @@ The project was based on a step-by-step process that combined <strong>SPARQL exp
 
 ### 1. Selecting the topic
 
-We selected [**Tempio Malatestiano**](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html), an architectural heritage resource located in Rimini, Italy.
+We selected [**Tempio Malatestiano**](https://en.wikipedia.org/wiki/Tempio_Malatestiano), an architectural heritage resource located in Rimini, Italy.
 
 This resource was chosen because it is a complex cultural heritage object. It is connected not only to architecture, but also to historical figures and artistic objects.
 
@@ -36,7 +36,7 @@ This resource was chosen because it is a complex cultural heritage object. It is
 
 ### 2. Exploring the ArCo knowledge graph
 
-The first step of the analysis was to explore the ArCo knowledge graph through the official [**SPARQL endpoint**](https://dati.cultura.gov.it/sparql). We searched for the main resource describing Tempio Malatestiano and analysed its RDF description.
+The first step of the analysis was to explore the [ArCo](http://wit.istc.cnr.it/arco/) knowledge graph through the official [SPARQL endpoint](https://dati.cultura.gov.it/sparql). We searched for the [main resource](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) describing Tempio Malatestiano and analysed its RDF description.
 
 The initial queries were used to retrieve:
 
@@ -65,7 +65,7 @@ These related resources were especially important because many of them are photo
 
 ### 5. Identifying information gaps
 
-By comparing the direct RDF description of the main resource with the information found in related photographic resources, we identified two main information gaps.
+By comparing the direct [RDF description](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) of the main resource with the information found in related photographic resources, we identified two main information gaps.
 
 #### Gap 1: Internal architectural components
 
@@ -92,7 +92,7 @@ However, these entities are not directly connected to the main architectural res
 
 Large Language Models were used as support tools during the project.
 
-We tested models such as <strong>ChatGPT</strong> and <strong>Gemini</strong> in order to see whether they could answer some questions concerning Tempio, help interpret the identified gaps and suggest possible enrichment strategies.
+We tested models such as [**ChatGPT**](https://chat.openai.com/) and [**Gemini**](https://gemini.google.com/?hl=it) in order to see whether they could answer some questions concerning Tempio, help interpret the identified gaps and suggest possible enrichment strategies.
 
 Different prompting techniques were used, including:
 
@@ -106,29 +106,17 @@ The answers produced by the models were compared with the evidence obtained thro
 
 ### 7. Proposing RDF triples
 
-After identifying the gaps, we proposed new RDF triples to enrich the knowledge graph.
+After identifying the gaps, we **proposed new RDF triples** to enrich the knowledge graph. The goal was not to create new properties, but to make implicit information explicit by reusing existing vocabulary from ArCo and related RDF vocabularies whenever possible.
 
-For the first gap, we proposed adding direct links between <strong>Tempio Malatestiano</strong> and its internal chapels using the property <code>cdesc:hasConstructionElement</code>.
+For the first gap, we proposed adding direct links between **Tempio Malatestiano** and its internal chapels using the [existing ArCo property](http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/construction-description/construction-description.owl) <code>cdesc:hasConstructionElement</code>. For the second gap, we initially considered creating local properties to connect the monument with historical and artistic entities. However, after checking the existing ArCo ontology modules, we decided to reuse already available properties instead.
 
-For the second gap, we proposed adding new relations between <strong>Tempio Malatestiano</strong> and historical or artistic entities associated with it.
+In the final RDF enrichment, historical figures are linked through the existing [ArCo Core property](http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl) <code>core:involvesAgent</code>. The Crocifisso giottesco is represented through <code>a-dd:hasAssociatedObject</code>, and the Stemma Malatesta is represented through <code>a-dd:hasElementAffixedToCulturalProperty</code>.
 
-The proposed enrichment aims to transform information that was previously implicit in labels into explicit RDF triples.
-
----
-
-### 8. Creating a vocabulary extension
-
-Some of the required relations were not sufficiently represented by the existing vocabulary. For this reason, we proposed a small local vocabulary extension using the namespace:
-
-<p>
-  <code>@prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .</code>
-</p>
-
-The vocabulary extension introduces several concepts, making the proposed enrichment more precise and semantically explicit.
+The enrichment aims to transform information that was previously implicit in photographic resource labels into explicit, structured and directly queryable RDF triples.
 
 ---
 
-### 9. Publishing the project website
+### 8. Publishing the project website
 
 The final step was to publish the project as a website using <strong>GitHub Pages</strong>.
 The website presents the main parts of the project to present our project in an accessible and visually structured format.
@@ -139,11 +127,11 @@ The website presents the main parts of the project to present our project in an 
 
 ### ArCo
 
-<strong>ArCo</strong> was used as the main knowledge graph for the project. It provides RDF descriptions of Italian cultural heritage resources.
+[**ArCo**](http://wit.istc.cnr.it/arco/) was used as the main knowledge graph for the project. It provides RDF descriptions of Italian cultural heritage resources.
 
 ### SPARQL
 
-<strong>SPARQL</strong> was used to query the ArCo knowledge graph.
+[**SPARQL endpoint**](https://dati.cultura.gov.it/sparql) was used to query the ArCo knowledge graph.
 
 We used <code>SELECT</code> queries to retrieve and analyse existing information, and <code>CONSTRUCT</code> queries to generate proposed RDF triples.
 
@@ -159,7 +147,7 @@ We used <code>SELECT</code> queries to retrieve and analyse existing information
 
 ### GitHub Pages
 
-<strong>GitHub Pages</strong> was used to publish the project website and organize the work into clear sections.
+[**GitHub Pages**](https://docs.github.com/en/pages) was used to publish the project website and organize the work into clear sections.
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="topic.html">Previous</a>
