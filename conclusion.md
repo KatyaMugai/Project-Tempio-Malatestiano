@@ -4,7 +4,7 @@ title: Conclusion
 ---
 
   <h3 style="text-align: center;">Sections:</h3>
-<div style="text-align: center; margin-bottom: 20px;">
+<div style="text-align: center; margin: 30px 0 25px 0; line-height: 1.8;">
   <a href="index.html">Home</a> |
   <a href="topic.html">Topic</a> |
   <a href="methodology.html">Methodology</a> |
@@ -19,7 +19,15 @@ title: Conclusion
 <h1>Conclusion</h1>
 
 <p>
-  This project explored the representation of <strong>Tempio Malatestiano</strong> in the <strong>ArCo knowledge graph</strong> and focused on one main question: what relevant information about this monument is already present in the dataset, but not yet represented as explicit RDF relations? At the beginning, the resource seemed quite rich because it was connected to several descriptions and photographic resources. However, the SPARQL exploration showed that richness in documentation does not always mean richness in structured semantic representation.
+  This project explored the RDF description of 
+  <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046" target="_blank">
+    Tempio Malatestiano
+  </a> 
+  in the ArCo Knowledge Graph in order to identify information that could benefit from enrichment.
+</p>
+
+<p>
+  The analysis showed that Tempio Malatestiano is well documented in ArCo, especially through related photographic resources. However, some important information is represented only indirectly, mainly inside textual labels, rather than as direct structured RDF relations of the main architectural resource.
 </p>
 
 <hr>
@@ -27,71 +35,97 @@ title: Conclusion
 <h2>Main findings</h2>
 
 <p>
-  The first important result concerns the architectural structure of the monument. In the direct RDF description of Tempio Malatestiano, only the facade is explicitly modeled as a construction element. At the same time, many related photographic resources mention internal chapels, including <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>. This showed that the information exists in ArCo, but it is hidden inside labels rather than modeled as direct construction-element relations.
+  The project identified two main gaps.
+</p>
+
+<h3>Gap 1: Internal architectural components</h3>
+
+<p>
+  The direct RDF description of Tempio Malatestiano includes only limited information about its construction elements. The SPARQL results showed that the facade is directly connected to the monument, while several internal chapels appear mainly in the labels of related photographic resources.
 </p>
 
 <p>
-  The second result concerns the historical and artistic context of the monument. The photographic resources mention important entities such as <strong>Sigismondo Pandolfo Malatesta</strong>, <strong>Isotta degli Atti</strong>, the <strong>Crocifisso giottesco</strong> and the <strong>Stemma Malatesta</strong>. These entities are meaningful for understanding Tempio Malatestiano, but they are not directly connected to the main architectural resource through structured RDF properties. For this reason, they became the basis for the second enrichment proposal.
+  These chapels include the Cappella delle Virtù, the Cappella dello Zodiaco, the Cappella degli Angeli and the Cappella degli Antenati.
+</p>
+
+<p>
+  To address this gap, the proposed enrichment represents these chapels as construction elements using the existing ArCo property <code>cdesc:hasConstructionElement</code>.
+</p>
+
+<h3>Gap 2: Historical and artistic entities</h3>
+
+<p>
+  The second gap concerns historical and artistic entities associated with Tempio Malatestiano. The SPARQL analysis showed that entities such as Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta appear in photographic resource labels, but are not directly connected to the main resource through structured RDF properties.
+</p>
+
+<p>
+  To address this gap, the final enrichment reuses existing ArCo and ArCo Core properties instead of introducing new local properties.
+</p>
+
+<ul>
+  <li><code>core:involvesAgent</code> is used for historical figures.</li>
+  <li><code>a-dd:hasAssociatedObject</code> is used for the Crocifisso giottesco.</li>
+  <li><code>a-dd:hasElementAffixedToCulturalProperty</code> is used for the Stemma Malatesta.</li>
+</ul>
+
+<hr>
+
+<h2>RDF enrichment strategy</h2>
+
+<p>
+  The proposed enrichment transforms information that was previously implicit in textual labels into explicit RDF triples.
+</p>
+
+<p>
+  The final modelling strategy follows a reuse-first approach. At an earlier stage of the project, a small local vocabulary extension was considered. However, after checking the existing ArCo ontology modules, we decided that suitable properties were already available.
+</p>
+
+<p>
+  For this reason, the final version of the project does not introduce new local properties. The <code>ex:</code> namespace is used only for local resources representing the specific entities identified during the analysis, such as chapels, historical figures, artistic objects and heraldic elements.
+</p>
+
+<p>
+  This decision made the enrichment less artificial and more consistent with the existing ArCo ontology.
 </p>
 
 <hr>
 
-<h2>What the enrichment adds</h2>
+<h2>Role of SPARQL and LLMs</h2>
 
 <p>
-  The proposed enrichment does not invent completely new information from outside the knowledge graph. Instead, it reorganizes information that was already visible in ArCo, but only indirectly. For the architectural gap, we proposed adding direct <code>cdesc:hasConstructionElement</code> relations between Tempio Malatestiano and the main internal chapels. For the historical and artistic gap, we proposed new relations such as <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> and <code>ex:hasHeraldicElement</code>.
+  SPARQL queries were the main tool used to explore the knowledge graph and identify the gaps. They made it possible to compare the direct RDF description of the monument with the information contained in related photographic resources.
 </p>
 
 <p>
-  This makes the knowledge graph more useful. A user or an application would no longer need to search for chapel names, persons or artistic elements inside long photographic labels. Instead, these elements could be retrieved directly through RDF properties. In this sense, the enrichment improves not only the amount of information in the graph, but also the way that information can be found, reused and interpreted.
-</p>
-
-<hr>
-
-<h2>Role of the vocabulary extension</h2>
-
-<p>
-  The vocabulary extension was necessary because not all the relations we needed were already available in a precise form for our use case. The class <code>ex:Chapel</code> allowed us to represent the internal chapels as architectural components, while <code>ex:ArtisticObject</code> and <code>ex:HeraldicElement</code> helped us distinguish artistic objects from heraldic or symbolic elements. The new properties also made the proposed relations clearer and more readable.
+  Large Language Models were used as supporting tools. Different prompting techniques were tested, including zero-shot prompting, chain-of-thought prompting and few-shot chain-of-thought prompting. However, the LLM outputs were not accepted automatically.
 </p>
 
 <p>
-  This part of the project was useful because it showed that enrichment is not only about adding triples. Sometimes it also requires thinking about the vocabulary itself: which classes are needed, which properties express the relation more accurately, and how new resources should be described so that they are understandable both for humans and machines.
+  The answers produced by the models were compared with the SPARQL results, and only information supported by the RDF data was used in the final interpretation and modelling.
 </p>
 
 <hr>
 
-<h2>Role of LLMs</h2>
+<h2>Final result</h2>
 
 <p>
-  Large Language Models were useful as support tools, especially for generating hypotheses, rephrasing questions and checking whether some associations made sense from a cultural point of view. However, their answers could not be used as evidence on their own. The most important methodological decision was to compare the LLM outputs with the SPARQL results and to keep the RDF data as the main source of verification.
+  The final enrichment proposal makes the representation of Tempio Malatestiano more explicit, structured and directly queryable.
 </p>
 
 <p>
-  This comparison made the role of LLMs clearer. They were helpful for interpretation, but the actual enrichment had to remain grounded in the knowledge graph. When the models gave broad historical answers, we checked whether the same information was actually visible in ArCo. When the models suggested entities or relations, we treated them as possible directions rather than final results.
-</p>
-
-<hr>
-
-<h2>What we learned</h2>
-
-<p>
-  The project showed that a knowledge graph can contain a lot of information and still have gaps at the semantic level. In the case of Tempio Malatestiano, the issue was not simply missing data. The problem was that important information was present in a form that was difficult to reuse computationally: inside textual labels of photographic resources. By transforming this implicit information into explicit RDF triples, the proposed enrichment makes the graph more precise and more searchable.
+  After the proposed enrichment, it would be possible to query the monument directly for its internal chapels, associated historical agents, related artistic object and affixed heraldic element.
 </p>
 
 <p>
-  Another important lesson was that SPARQL exploration is not just a technical step. It is also a way of understanding how knowledge is organized. The queries helped us see the difference between direct RDF relations, related resources and textual descriptions. Without this distinction, it would have been easy to confuse “information mentioned somewhere” with “information modeled in the graph”.
-</p>
-
-<hr>
-
-<h2>Final consideration</h2>
-
-<p>
-  Overall, the project demonstrates how the combination of SPARQL, RDF modeling and LLM-assisted reflection can support the enrichment of a cultural heritage knowledge graph. Tempio Malatestiano was already well documented in ArCo, but the enrichment proposed here makes some of its architectural, historical and artistic aspects more explicit. The final result is a more structured representation of the monument, where internal chapels, associated persons, artistic objects and heraldic elements can be queried directly instead of being found only through textual labels.
+  This is more effective than searching for these entities only inside photographic resource labels.
 </p>
 
 <p>
-  For this reason, the project does not simply add more data to the graph. It improves the quality of the representation by turning hidden or implicit knowledge into clear semantic relations.
+  Overall, the project shows that knowledge graph enrichment is not only about adding more data. It is also about deciding how to represent information correctly, how to reuse existing ontology properties and how to avoid unnecessary vocabulary extension.
+</p>
+
+<p>
+  In this project, the most important result was the transformation of implicit information into explicit RDF triples while remaining aligned with the modelling principles already available in ArCo.
 </p>
 
 <hr>
