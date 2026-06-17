@@ -293,23 +293,39 @@ ex:StemmaMalatesta
 <h2>Why these triples improve the knowledge graph</h2>
 
 <p>
-  The proposed enrichment improves the representation of Tempio Malatestiano in three main ways.
+  The proposed enrichment improves the representation of Tempio Malatestiano by transforming information that was previously implicit in textual labels into explicit RDF triples.
+</p>
+
+<p>
+  In the original RDF description, some relevant information about the monument appeared only indirectly, mainly through the labels of related photographic resources. For example, the labels mentioned internal chapels, historical figures, the Crocifisso giottesco and the Stemma Malatesta. However, these entities were not directly represented as structured relations of the main Tempio Malatestiano resource.
+</p>
+
+<p>
+  The proposed triples improve the knowledge graph in three main ways.
 </p>
 
 <ul>
   <li>
-    It makes the internal architectural structure of the monument more explicit by representing chapels as construction elements.
+    They make the internal architectural structure of the monument more explicit by representing chapels as construction elements through <code>cdesc:hasConstructionElement</code>.
   </li>
   <li>
-    It makes historical and artistic entities directly queryable through RDF properties.
+    They make historical figures directly queryable by linking them to the monument through the existing ArCo Core property <code>core:involvesAgent</code>.
   </li>
   <li>
-    It transforms information that was previously implicit in textual labels into explicit RDF triples.
+    They represent artistic and heraldic entities using existing ArCo denotative-description properties, namely <code>a-dd:hasAssociatedObject</code> and <code>a-dd:hasElementAffixedToCulturalProperty</code>.
   </li>
 </ul>
 
 <p>
-  As a result, the enriched graph would be more precise, more searchable and more reusable for cultural heritage research.
+  Compared to the initial modelling proposal, this version is more aligned with the ArCo ontology. Instead of introducing new local properties such as <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> or <code>ex:hasHeraldicElement</code>, the enrichment reuses already existing properties from ArCo and ArCo Core.
+</p>
+
+<p>
+  The only local resources introduced in the graph are the specific entities that were missing as direct structured resources in the original RDF description, such as the chapels, Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta.
+</p>
+
+<p>
+  As a result, the enriched graph becomes more precise, more searchable and more reusable for cultural heritage research.
 </p>
 
 <hr>
@@ -333,10 +349,85 @@ WHERE {
 </code></pre>
 
 <p>
-  This kind of query would be more direct and semantically meaningful than searching for chapel names inside photographic resource labels.
+  This query would return the internal chapels proposed in the enrichment, such as the Cappella delle Virtù, the Cappella dello Zodiaco, the Cappella degli Angeli and the Cappella degli Antenati.
+</p>
+
+<p>
+  It would also be possible to directly query the historical agents associated with the monument:
+</p>
+
+<pre><code>PREFIX core: &lt;https://w3id.org/arco/ontology/core/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?agent ?label
+WHERE {
+  &lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt;
+      core:involvesAgent ?agent .
+
+  OPTIONAL { ?agent rdfs:label ?label . }
+}
+</code></pre>
+
+<p>
+  This query would return historical figures such as Sigismondo Pandolfo Malatesta and Isotta degli Atti as agents involved in the historical and cultural context of Tempio Malatestiano.
+</p>
+
+<p>
+  It would also be possible to directly query associated objects and affixed elements connected to the monument:
+</p>
+
+<pre><code>PREFIX a-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?property ?entity ?label
+WHERE {
+  &lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt;
+      ?property ?entity .
+
+  VALUES ?property {
+    a-dd:hasAssociatedObject
+    a-dd:hasElementAffixedToCulturalProperty
+  }
+
+  OPTIONAL { ?entity rdfs:label ?label . }
+}
+  </code></pre>
+
+<p>
+  This query would make it possible to retrieve the Crocifisso giottesco as an associated object and the Stemma Malatesta as an element affixed to the cultural property.
+</p>
+
+<p>
+  These future queries would be more direct and semantically meaningful than searching for entity names inside photographic resource labels.
 </p>
 
 <hr>
+
+<h2>Modelling decision</h2>
+
+<p>
+  The enrichment follows a reuse-first modelling strategy.
+</p>
+
+<p>
+  At the beginning of the project, local properties such as <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> and <code>ex:hasHeraldicElement</code> were considered. However, after checking the existing ArCo ontology modules, we decided not to introduce these custom properties.
+</p>
+
+<p>
+  Instead, the final RDF enrichment reuses existing properties:
+</p>
+
+<ul>
+  <li><code>cdesc:hasConstructionElement</code> for internal architectural components;</li>
+  <li><code>core:involvesAgent</code> for historical agents;</li>
+  <li><code>a-dd:hasAssociatedObject</code> for the Crocifisso giottesco;</li>
+  <li><code>a-dd:hasElementAffixedToCulturalProperty</code> for the Stemma Malatesta.</li>
+</ul>
+
+<p>
+  This makes the proposed enrichment less artificial and more consistent with the modelling choices already available in ArCo.
+</p>
+</hr>
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="llms.html">Previous</a>
