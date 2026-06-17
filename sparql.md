@@ -325,11 +325,7 @@ ORDER BY ?source DESC(?numberOfResources)
 <h2>Query 5 — Finding historical and artistic entities in photographic resources</h2>
 
 <p>
-  The next query focused on <strong>historical and artistic entities</strong> associated with Tempio Malatestiano.
-</p>
-
-<p>
-  The aim was to check whether important persons, artistic objects and symbolic elements appear in the labels of related photographic resources.
+  The next query focused on <strong>historical and artistic entities</strong> associated with Tempio Malatestiano. The aim was to check whether important persons, artistic objects and symbolic elements appear in the labels of related photographic resources.
 </p>
 
 <h3>Explanation of keywords used</h3>
@@ -421,11 +417,7 @@ ORDER BY DESC(?numberOfPhotos)
 <h2>Query 6 — Checking whether historical and artistic entities are directly linked</h2>
 
 <p>
-  The final query was used to check whether the historical and artistic entities identified in photographic labels were already directly linked to the main Tempio Malatestiano resource.
-</p>
-
-<p>
-  To do this, we excluded <code>rdfs:seeAlso</code> and searched only among the direct properties of the main resource.
+  The final query was used to check whether the historical and artistic entities identified in photographic labels were already directly linked to the main Tempio Malatestiano resource. To do this, we excluded <code>rdfs:seeAlso</code> and searched only among the direct properties of the main resource.
 </p>
 
 <h3>Explanation of keywords used</h3>
@@ -481,7 +473,7 @@ LIMIT 100
 <h3>Interpretation</h3>
 
 <p>
-  The absence of results confirms that the selected historical and artistic entities are not directly connected to the main Tempio Malatestiano resource through structured RDF properties. They appear mainly through the labels of related photographic resources. This became the basis for the second identified gap and for the proposed RDF enrichment.
+  The absence of results <strong>confirms that the selected historical and artistic entities are not directly connected</strong> to the main Tempio Malatestiano resource through structured RDF properties. They appear mainly through the labels of related photographic resources. This became the basis for the second identified gap and for the proposed RDF enrichment.
 </p>
 
 <hr>
@@ -489,15 +481,15 @@ LIMIT 100
 <h2>Conclusion of the SPARQL exploration</h2>
 
 <p>
-  The SPARQL exploration showed that Tempio Malatestiano is already well documented in ArCo, especially through related photographic resources. However, the analysis also revealed that some important information is not represented as explicit RDF relations of the main architectural resource. 
+  The SPARQL exploration showed that Tempio Malatestiano is already well documented in ArCo, especially <strong>through related photographic resources</strong>. However, the analysis also revealed that some important information is not represented as explicit RDF relations of the main architectural resource. 
 </p>
   
   <p>
-  The first gap concerns the internal architectural components of the monument. The second gap concerns historical and artistic entities associated with it.
+  The first gap concerns the <strong>internal architectural components</strong> of the monument. The second gap concerns <strong>historical and artistic entities</strong> associated with it.
 </p>
 
 <p>
-  These results provided the evidence for the following sections of the project: <strong>Identifying Gaps</strong>, <strong>RDF Triples</strong> and <strong>Vocabulary Extension</strong>.
+  These results provided the evidence for the following sections of the project: <a href="gaps.html">Identifying Gaps</a><strong>Identifying Gaps</strong>, <strong>RDF Triples</strong> and <strong>Vocabulary Extension</strong>.
 </p>
 
 <hr>
