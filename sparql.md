@@ -111,6 +111,10 @@ LIMIT 100
 
 <h3>Results</h3>
 
+<img src="assets/images/q2.1.png" alt="SPARQL Query 1 results" style="max-width: 100%;">
+<img src="assets/images/q2.2.png" alt="SPARQL Query 1 results" style="max-width: 100%;">
+<img src="assets/images/q2.3.png" alt="SPARQL Query 1 results" style="max-width: 100%;">
+
 <p>
   The query showed that the main resource has several direct properties, including type, location, documentation and depictions.
 </p>
