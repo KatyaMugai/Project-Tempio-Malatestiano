@@ -383,11 +383,7 @@ WHERE {
 </p>
 
 <p>
-  At the beginning of the project, local properties such as <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> and <code>ex:hasHeraldicElement</code> were considered. However, after checking the existing ArCo ontology modules, we decided not to introduce these custom properties.
-</p>
-
-<p>
-  Instead, the final RDF enrichment reuses existing properties:
+  At the beginning of the project, local properties such as <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> and <code>ex:hasHeraldicElement</code> were considered. However, after checking the existing ArCo ontology modules thoroughly, we decided not to introduce these custom properties. Instead, the final RDF enrichment reuses existing properties:
 </p>
 
 <ul>
