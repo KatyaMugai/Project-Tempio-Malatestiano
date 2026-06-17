@@ -68,10 +68,6 @@ title: Vocabulary Extension
     </thead>
     <tbody>
       <tr>
-        <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:Chapel</code></td>
-        <td style="border: 1px solid #ddd; padding: 12px;">Represents internal chapels as architectural components of Tempio Malatestiano.</td>
-      </tr>
-      <tr>
         <td style="border: 1px solid #ddd; padding: 12px;"><code>ex:ArtisticObject</code></td>
         <td style="border: 1px solid #ddd; padding: 12px;">Represents artistic objects associated with the monument.</td>
       </tr>
@@ -89,11 +85,6 @@ title: Vocabulary Extension
 @prefix cdesc: &lt;https://w3id.org/arco/ontology/construction-description/&gt; .
 @prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .
 
-ex:Chapel
-    a rdfs:Class ;
-    rdfs:label "Chapel"@en ;
-    rdfs:label "Cappella"@it ;
-    rdfs:subClassOf cdesc:ConstructionElement .
 
 ex:ArtisticObject
     a rdfs:Class ;
@@ -107,10 +98,6 @@ ex:HeraldicElement
 </code></pre>
 
 <h3>Explanation</h3>
-
-<p>
-  The class <code>ex:Chapel</code> is defined as a subclass of <code>cdesc:ConstructionElement</code> because the internal chapels function as architectural components of Tempio Malatestiano.
-</p>
 
 <p>
   The classes <code>ex:ArtisticObject</code> and <code>ex:HeraldicElement</code> were introduced to represent artistic and symbolic entities associated with the monument.
