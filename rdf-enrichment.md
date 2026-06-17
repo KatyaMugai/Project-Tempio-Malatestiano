@@ -12,7 +12,6 @@ title: RDF Enrichment
   <a href="gaps.html">Identifying Gaps</a> |
   <a href="llms.html">LLM Prompts</a> |
   <a href="rdf-enrichment.html">RDF Triples</a> |
-  <a href="vocabulary-extension.html">Vocabulary Extension</a> |
   <a href="challenges.html">Challenges</a> |
   <a href="conclusion.html">Conclusion</a>
 </div>
@@ -342,5 +341,5 @@ WHERE {
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
   <a href="llms.html">Previous</a>
-  <a href="vocabulary-extension.html">Next</a>
+  <a href="challenges.html">Next</a>
 </div>
