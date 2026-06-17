@@ -19,11 +19,15 @@ title: SPARQL Results
 <h1>SPARQL Queries & Results</h1>
 
 <p>
-  This section presents the main SPARQL queries used to explore the ArCo Knowledge Graph and analyse the RDF description of <strong>Tempio Malatestiano</strong>.
+  This section presents the main SPARQL queries used to explore the [ArCo](http://wit.istc.cnr.it/arco/) Knowledge Graph and analyse the [RDF description](https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html) of <strong>Tempio Malatestiano</strong>.
 </p>
 
 <p>
   The purpose of these queries was to understand what is already explicitly represented in ArCo and what information appears only indirectly through related resources, especially photographic documentation.
+</p>
+
+<p>
+  While queries 1 and 2 were used for the general search and exploration of the selected reource, they appear only in this section. As for queries 3-6, they are presented both on this page and in the Identifying Gaps section because they were used for specifically to identify and analyse the gaps discussed in the project while they can be referred to SPARQL queries.
 </p>
 
 <hr>
@@ -41,6 +45,8 @@ title: SPARQL Results
   <li><code>FILTER</code>: restricts the results according to a condition.</li>
   <li><code>REGEX</code>: searches for a pattern inside a string.</li>
   <li><code>DISTINCT</code>: removes duplicate results.</li>
+  <li><code>cp</code>: stands for Cultural Property.</li>
+  <li><code>LIMIT 50</code>: restricts the number of results returned to the first 50 matches, for efficiency and readability.</li>
 </ul>
 
 <h3>SPARQL Query</h3>
@@ -70,16 +76,12 @@ LIMIT 50
   <pre><code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
   </code></pre>
 
-<p>
-  This resource became the <strong>main subject</strong> of the following SPARQL exploration.
-</p>
-
 <hr>
 
 <h2>Query 2 — Exploring the direct RDF description</h2>
 
 <p>
-  After identifying the main resource, we explored its direct RDF description. The goal was to understand which <strong>properties and values are directly connected</strong> to the main resource.
+  After identifying the main resource, we explored its direct RDF description. The goal was to understand which <strong>properties and values are directly connected</strong> to <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html" target="_blank"><strong>the main resource</strong></a>.
 </p>
 
 <h3>Explanation of keywords used</h3>
@@ -119,7 +121,7 @@ LIMIT 100
 </p>
 
 <p>
-  However, the direct RDF description <strong>did not provide a detailed structured representation</strong> of the internal architectural components of the monument or of the historical and artistic entities associated with it.
+  However, the <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html" target="_blank">direct RDF description</a> <strong>did not provide a detailed structured representation</strong> of the internal architectural components of the monument or of the historical and artistic entities associated with it.
 </p>
 
 <hr>
