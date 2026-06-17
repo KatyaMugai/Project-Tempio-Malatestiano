@@ -60,6 +60,7 @@ Please write a SPARQL CONSTRUCT query that creates an RDF triple with:
 Subject: https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046
 
 Predicate: arco:hasDating
+
 Object: 1450              
 First, provide the CONSTRUCT query, then the RDF triple in Turtle syntax. Include all necessary PREFIX declarifications.
 
