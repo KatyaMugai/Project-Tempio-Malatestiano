@@ -19,7 +19,7 @@ title: SPARQL Results
 <h1>SPARQL Queries & Results</h1>
 
 <p>
-  This section presents the main SPARQL queries used to explore the <a href="http://wit.istc.cnr.it/arco/" target="_blank"><strong>ArCo</strong></a> Knowledge Graph and analyse the <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html"<strong>RDF description</strong></a> of <strong>Tempio Malatestiano</strong>.
+  This section presents the main SPARQL queries used to explore the <a href="http://wit.istc.cnr.it/arco/" target="_blank"><strong>ArCo</strong></a> Knowledge Graph and analyse the <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html"target="_blank"><strong>RDF description</strong></a> of <strong>Tempio Malatestiano</strong>.
 </p>
 
 <p>
