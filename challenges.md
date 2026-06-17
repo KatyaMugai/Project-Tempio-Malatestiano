@@ -12,7 +12,6 @@ title: Challenges
   <a href="gaps.html">Identifying Gaps</a> |
   <a href="llms.html">LLM Prompts</a> |
   <a href="rdf-enrichment.html">RDF Triples</a> |
-  <a href="vocabulary-extension.html">Vocabulary Extension</a> |
   <a href="challenges.html">Challenges</a> |
   <a href="conclusion.html">Conclusion</a>
 </div>
@@ -178,6 +177,6 @@ title: Challenges
 <hr>
 
 <div style="display: flex; justify-content: space-between; margin-top: 2em;">
-  <a href="vocabulary-extension.html">Previous</a>
+  <a href="rdf-enrichment.html">Previous</a>
   <a href="conclusion.html">Next</a>
 </div>
