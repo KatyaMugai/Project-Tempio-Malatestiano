@@ -489,7 +489,7 @@ LIMIT 100
 </p>
 
 <p>
-  These results provided the evidence for the following sections of the project: <a href="gaps.html">Identifying Gaps</a><strong>Identifying Gaps</strong>, <strong>RDF Triples</strong> and <strong>Vocabulary Extension</strong>.
+  These results provided the evidence for the following sections of the project: <a href="gaps.html">Identifying Gaps</a> and <a href="rdf-enrichment.html">RDF Triples</a>.
 </p>
 
 <hr>
