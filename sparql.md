@@ -129,7 +129,7 @@ LIMIT 100
 <h2>Query 3 — Checking existing construction elements</h2>
 
 <p>
-  This query was used to check which construction elements are directly linked to Tempio Malatestiano.
+  This query was used to check which <strrong>construction elements</strrong> are directly linked to Tempio Malatestiano.
 </p>
 
 <p>
@@ -185,7 +185,7 @@ LIMIT 100
 <h3>Interpretation</h3>
 
 <p>
-  This result shows that, in the direct RDF description, only the facade is explicitly modeled as a construction element of Tempio Malatestiano.
+  This result shows that, in the <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html" target="_blank">direct RDF description</a>, only the facade is explicitly modeled as a construction element of Tempio Malatestiano.
 </p>
 
 <p>
@@ -197,16 +197,12 @@ LIMIT 100
 <h2>Query 4 — Finding internal chapels in photographic resources</h2>
 
 <p>
-  Since the direct RDF description returned only the facade as a construction element, the next step was to examine the photographic resources linked to Tempio Malatestiano through <code>rdfs:seeAlso</code>.
-</p>
-
-<p>
-  In this query, we used <code>UNION</code> in order to compare two different types of information in one query:
+  Since the <a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046.html" target="_blank">direct RDF description</a> returned only the facade as a construction element, the next step was to examine the photographic resources linked to Tempio Malatestiano through <code>rdfs:seeAlso</code>. In this query, we used <code>UNION</code> in order to compare two different types of information in one query:
 </p>
 
 <ul>
-  <li>construction elements directly connected to the main Tempio Malatestiano resource;</li>
-  <li>internal chapels mentioned only in the labels of related photographic resources.</li>
+  <li>construction elements <strong>directly connected</strong> to the main Tempio Malatestiano resource;</li>
+  <li>internal chapels mentioned <strong>only in the labels of related photographic resources</strong>.</li>
 </ul>
 
 <p>
@@ -223,6 +219,7 @@ LIMIT 100
   <li><code>REGEX</code>: searches for specific chapel names in the labels.</li>
   <li><code>COUNT</code>: counts how many resources mention or represent each element.</li>
   <li><code>GROUP BY</code>: groups the results by source and element name.</li>
+  <li><code>ORDER BY ?source DESC(?numberOfResources)</code>: sorts the results by sources and in the descending order of number of resources.</li>
 </ul>
 
 <h3>SPARQL Query</h3>
@@ -315,15 +312,10 @@ ORDER BY ?source DESC(?numberOfResources)
 <h3>Interpretation</h3>
 
 <p>
-  The results show a clear difference between structured RDF data and information that appears only indirectly in textual labels.
-</p>
-
-<p>
-  The first part of the query returns the <strong>facade</strong> as the only construction element directly connected to the main Tempio Malatestiano resource.
-</p>
-
-<p>
-  The second part of the query returns several internal chapels that are repeatedly mentioned in the labels of related photographic resources, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>.
+  The results show a <strong>clear difference</strong> between structured RDF data and information that appears only indirectly in textual labels. 
+  
+ <p>
+  The first part of the query returns the <strong>facade</strong> as the only construction element directly connected to the main Tempio Malatestiano resource.The second part of the query returns several internal chapels that are repeatedly mentioned in the labels of related photographic resources, such as <strong>Cappella delle Virtù / S. Sigismondo</strong>, <strong>Cappella dello Zodiaco</strong>, <strong>Cappella degli Angeli</strong> and <strong>Cappella degli Antenati</strong>.
 </p>
 
 <p>
