@@ -97,6 +97,18 @@ Make sure to use the correct prefixes and return only the CONSTRUCT query and th
 
 <img width="786" height="717" alt="image" src="https://github.com/user-attachments/assets/4fa4c5e2-d29e-4cb8-b67e-99995562a3e2" />
 
+Seventh RDF Triple
+Connection to Leon Battista Alberti – Zero-Shot Prompt
+
+We are working on a cultural heritage knowledge graph using SPARQL.
+We want to connect the Tempio Malatestiano to Leon Battista Alberti. Please write a SPARQL CONSTRUCT query and create an RDF triple using
+Turtle syntax with:
+Subject: <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800242914>
+Predicate: arco:hasRelatedAgent
+Object: Since Leon Battista Alberti is not present in ArCo, we mint a new IRI: https://w3id.org/arco/resource/Agent/leon-battista-alberti
+Include all necessary PREFIX declarations.
+
+
 
 ---
 
