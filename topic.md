@@ -44,16 +44,16 @@ The main objectives of this project are:
 
 - To explore the [**ArCo knowledge graph**](http://wit.istc.cnr.it/arco/) using the official [**SPARQL endpoint**](https://dati.cultura.gov.it/sparql) and identify information gaps.
 - To **propose new RDF triples** that could enrich the ArCo Knowledge Graph.
-- To use **Large Language Models**, such as [ChatGPT](https://chat.openai.com/) and [Gemini](https://gemini.google.com/?hl=it), to support the interpretation of the identified gaps and compare their outputs.
+- To use **Large Language Models**, such as [**ChatGPT**](https://chat.openai.com/) and [**Gemini**](https://gemini.google.com/?hl=it), to support the interpretation of the identified gaps and compare their outputs.
 
 ---
 
 ## Research Questions
 
 <ul>
-  <li>Which architectural components of Tempio Malatestiano are **directly represented** in ArCo?</li>
-  <li>Which internal chapels appear **only in photographic resource labels**?</li>
-  <li>Which historical and artistic entities are associated with Tempio Malatestiano but **not directly linked** to the main resource?</li>
+  <li>Which architectural components of Tempio Malatestiano are <strong>directly represented</strong> in ArCo?</li>
+  <li>Which internal chapels appear <strong>only in photographic resource labels</strong>?</li>
+  <li>Which historical and artistic entities are associated with Tempio Malatestiano but <strong>not directly linked</strong> to the main resource?</li>
   <li>Which RDF triples could make this information explicit?</li>
 </ul>
 
