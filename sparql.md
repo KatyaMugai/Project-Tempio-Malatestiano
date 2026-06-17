@@ -265,6 +265,10 @@ ORDER BY ?source DESC(?numberOfResources)
 
 <h3>Results</h3>
 
+<a href="assets/images/q4.png" target="_blank">
+  Open screenshot of Query 4 results
+</a>
+
 <table>
   <thead>
     <tr>
@@ -374,6 +378,10 @@ ORDER BY DESC(?numberOfPhotos)
 
 <h3>Results</h3>
 
+<a href="assets/images/q5.png" target="_blank">
+  Open screenshot of Query 5 results
+</a>
+
 <table>
   <thead>
     <tr>
@@ -470,6 +478,8 @@ LIMIT 100
 </code></pre>
 
 <h3>Results</h3>
+
+<img src="assets/images/q6.png" alt="SPARQL Query 6 results" style="max-width: 100%;">
 
 <p>
   This query returned no results.
