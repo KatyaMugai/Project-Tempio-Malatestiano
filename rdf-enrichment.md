@@ -131,64 +131,102 @@ WHERE { }
 
 <hr>
 
-<h2>2. Enrichment for Gap 2: Historical and artistic entities</h2>
+## 2. Enrichment for Gap 2: Historical and artistic entities
 
-<p>
-  The second gap concerns historical and artistic entities associated with Tempio Malatestiano.
-</p>
+The second gap concerns historical and artistic entities associated with Tempio Malatestiano.
 
-<p>
-  SPARQL exploration showed that related photographic resources mention several relevant entities, including <strong>Sigismondo Pandolfo Malatesta</strong>, <strong>Isotta degli Atti</strong>, the <strong>Crocifisso giottesco</strong> and the <strong>Stemma Malatesta</strong>.
-</p>
+SPARQL exploration showed that related photographic resources mention several relevant entities, including Sigismondo Pandolfo Malatesta, Isotta degli Atti, the Crocifisso giottesco and the Stemma Malatesta.
 
-<p>
-  However, these entities are not directly linked to the main Tempio Malatestiano resource through structured RDF properties.
-</p>
+However, these entities are not directly linked to the main Tempio Malatestiano resource through structured RDF properties.
 
-<p>
-  To enrich the graph, we propose adding explicit relations between the monument and these historical, artistic and heraldic entities.
-</p>
+For this reason, the enrichment reuses existing ArCo and ArCo Core properties instead of introducing new local properties.
 
-<h3>SPARQL CONSTRUCT query</h3>
+### Vocabulary reused for Gap 2
 
-<pre><code>PREFIX ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt;
+<ul>
+  <li><code>core:involvesAgent</code>: used to connect Tempio Malatestiano to the historical agents mentioned in the photographic resource labels.</li>
+  <li><code>a-dd:hasAssociatedObject</code>: used to connect Tempio Malatestiano to the Crocifisso giottesco as an associated object.</li>
+  <li><code>a-dd:hasElementAffixedToCulturalProperty</code>: used to connect Tempio Malatestiano to the Stemma Malatesta as an affixed element of the cultural property.</li>
+  <li><code>rdfs:label</code>: used to provide readable labels for the new resources.</li>
+  <li><code>rdf:type</code>: used to type the historical figures as agents.</li>
+</ul>
 
-CONSTRUCT {
-  &lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt;
-      ex:hasAssociatedPerson ex:SigismondoPandolfoMalatesta ;
-      ex:hasAssociatedPerson ex:IsottaDegliAtti ;
-      ex:containsArtisticObject ex:CrocifissoGiottesco ;
-      ex:hasHeraldicElement ex:StemmaMalatesta .
-}
-WHERE { }
-</code></pre>
+### SPARQL CONSTRUCT query
 
-<h3>Produced RDF triples</h3>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX core: <https://w3id.org/arco/ontology/core/>
+    PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>
+    PREFIX ex: <https://example.org/tempio-malatestiano/enrichment/>
 
-<pre><code>@prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .
+    CONSTRUCT {
+      <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046>
+          core:involvesAgent ex:SigismondoPandolfoMalatesta ;
+          core:involvesAgent ex:IsottaDegliAtti ;
+          a-dd:hasAssociatedObject ex:CrocifissoGiottesco ;
+          a-dd:hasElementAffixedToCulturalProperty ex:StemmaMalatesta .
 
-&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt;
-    ex:hasAssociatedPerson ex:SigismondoPandolfoMalatesta ;
-    ex:hasAssociatedPerson ex:IsottaDegliAtti ;
-    ex:containsArtisticObject ex:CrocifissoGiottesco ;
-    ex:hasHeraldicElement ex:StemmaMalatesta .
-</code></pre>
+      ex:SigismondoPandolfoMalatesta
+          rdf:type core:Agent ;
+          rdfs:label "Sigismondo Pandolfo Malatesta"@it .
 
-<h3>Interpretation</h3>
+      ex:IsottaDegliAtti
+          rdf:type core:Agent ;
+          rdfs:label "Isotta degli Atti"@it .
 
-<p>
-  These triples make explicit the connection between Tempio Malatestiano and historically or artistically relevant entities.
-</p>
+      ex:CrocifissoGiottesco
+          rdfs:label "Crocifisso giottesco"@it ;
+          rdfs:label "Giottesque Crucifix"@en .
 
-<p>
-  The properties <code>ex:hasAssociatedPerson</code>, <code>ex:containsArtisticObject</code> and <code>ex:hasHeraldicElement</code> are part of the proposed local vocabulary extension.
-</p>
+      ex:StemmaMalatesta
+          rdfs:label "Stemma Malatesta"@it ;
+          rdfs:label "Malatesta coat of arms"@en .
+    }
+    WHERE { }
 
-<p>
-  This enrichment allows the knowledge graph to represent not only the monument as an architectural object, but also its historical and artistic context.
-</p>
+### Produced RDF triples
 
-<hr>
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix core: <https://w3id.org/arco/ontology/core/> .
+    @prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+    @prefix ex: <https://example.org/tempio-malatestiano/enrichment/> .
+
+    <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046>
+        core:involvesAgent ex:SigismondoPandolfoMalatesta ;
+        core:involvesAgent ex:IsottaDegliAtti ;
+        a-dd:hasAssociatedObject ex:CrocifissoGiottesco ;
+        a-dd:hasElementAffixedToCulturalProperty ex:StemmaMalatesta .
+
+    ex:SigismondoPandolfoMalatesta
+        rdf:type core:Agent ;
+        rdfs:label "Sigismondo Pandolfo Malatesta"@it .
+
+    ex:IsottaDegliAtti
+        rdf:type core:Agent ;
+        rdfs:label "Isotta degli Atti"@it .
+
+    ex:CrocifissoGiottesco
+        rdfs:label "Crocifisso giottesco"@it ;
+        rdfs:label "Giottesque Crucifix"@en .
+
+    ex:StemmaMalatesta
+        rdfs:label "Stemma Malatesta"@it ;
+        rdfs:label "Malatesta coat of arms"@en .
+
+### Interpretation
+
+These triples make explicit the connection between Tempio Malatestiano and historical or artistic entities that were previously mentioned only in the labels of related photographic resources.
+
+The enrichment does not introduce new local properties for Gap 2. Instead, it reuses existing properties from ArCo Core and ArCo denotative-description.
+
+The historical figures are connected to the monument through <code>core:involvesAgent</code>.
+
+The Crocifisso giottesco is represented through <code>a-dd:hasAssociatedObject</code>, while the Stemma Malatesta is represented through <code>a-dd:hasElementAffixedToCulturalProperty</code>.
+
+The only local resources introduced here are the URIs for the specific entities that were missing as direct structured resources in the original RDF description.
+
+---
 
 <h2>3. Full proposed RDF graph</h2>
 
@@ -196,97 +234,58 @@ WHERE { }
   The following Turtle graph combines the proposed enrichment triples with the new resources and vocabulary extension used in the project.
 </p>
 
-<pre><code>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-@prefix arco: &lt;https://w3id.org/arco/ontology/arco/&gt; .
-@prefix cdesc: &lt;https://w3id.org/arco/ontology/construction-description/&gt; .
-@prefix ex: &lt;https://example.org/tempio-malatestiano/enrichment/&gt; .
+<pre><code>@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix core: <https://w3id.org/arco/ontology/core/> .
+@prefix cdesc: <https://w3id.org/arco/ontology/construction-description/> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ex: <https://example.org/tempio-malatestiano/enrichment/> .
 
-&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046&gt;
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800163046>
     cdesc:hasConstructionElement ex:CappellaDelleVirtu ;
     cdesc:hasConstructionElement ex:CappellaDelloZodiaco ;
     cdesc:hasConstructionElement ex:CappellaDegliAngeli ;
     cdesc:hasConstructionElement ex:CappellaDegliAntenati ;
-    ex:hasAssociatedPerson ex:SigismondoPandolfoMalatesta ;
-    ex:hasAssociatedPerson ex:IsottaDegliAtti ;
-    ex:containsArtisticObject ex:CrocifissoGiottesco ;
-    ex:hasHeraldicElement ex:StemmaMalatesta .
-
-ex:Chapel
-    a rdfs:Class ;
-    rdfs:label "Chapel"@en ;
-    rdfs:label "Cappella"@it ;
-    rdfs:subClassOf cdesc:ConstructionElement .
-
-ex:ArtisticObject
-    a rdfs:Class ;
-    rdfs:label "Artistic object"@en ;
-    rdfs:label "Oggetto artistico"@it .
-
-ex:HeraldicElement
-    a rdfs:Class ;
-    rdfs:label "Heraldic element"@en ;
-    rdfs:label "Elemento araldico"@it .
+    core:involvesAgent ex:SigismondoPandolfoMalatesta ;
+    core:involvesAgent ex:IsottaDegliAtti ;
+    a-dd:hasAssociatedObject ex:CrocifissoGiottesco ;
+    a-dd:hasElementAffixedToCulturalProperty ex:StemmaMalatesta .
 
 ex:CappellaDelleVirtu
-    a ex:Chapel ;
+    rdf:type cdesc:ConstructionElement ;
     rdfs:label "Cappella delle Virtù / S. Sigismondo"@it ;
     rdfs:label "Chapel of the Virtues / St. Sigismund"@en .
 
 ex:CappellaDelloZodiaco
-    a ex:Chapel ;
+    rdf:type cdesc:ConstructionElement ;
     rdfs:label "Cappella dello Zodiaco"@it ;
     rdfs:label "Chapel of the Zodiac"@en .
 
 ex:CappellaDegliAngeli
-    a ex:Chapel ;
+    rdf:type cdesc:ConstructionElement ;
     rdfs:label "Cappella degli Angeli"@it ;
     rdfs:label "Chapel of the Angels"@en .
 
 ex:CappellaDegliAntenati
-    a ex:Chapel ;
+    rdf:type cdesc:ConstructionElement ;
     rdfs:label "Cappella degli Antenati"@it ;
     rdfs:label "Chapel of the Ancestors"@en .
 
 ex:SigismondoPandolfoMalatesta
-    a foaf:Person ;
+    rdf:type core:Agent ;
     rdfs:label "Sigismondo Pandolfo Malatesta"@it .
 
 ex:IsottaDegliAtti
-    a foaf:Person ;
+    rdf:type core:Agent ;
     rdfs:label "Isotta degli Atti"@it .
 
 ex:CrocifissoGiottesco
-    a ex:ArtisticObject ;
     rdfs:label "Crocifisso giottesco"@it ;
     rdfs:label "Giottesque Crucifix"@en .
 
 ex:StemmaMalatesta
-    a ex:HeraldicElement ;
     rdfs:label "Stemma Malatesta"@it ;
     rdfs:label "Malatesta coat of arms"@en .
-
-ex:hasAssociatedPerson
-    a rdf:Property ;
-    rdfs:label "has associated person"@en ;
-    rdfs:comment "Relates a cultural heritage resource to a historical person associated with it."@en ;
-    rdfs:domain arco:ArchitecturalOrLandscapeHeritage ;
-    rdfs:range foaf:Person .
-
-ex:containsArtisticObject
-    a rdf:Property ;
-    rdfs:label "contains artistic object"@en ;
-    rdfs:comment "Relates an architectural heritage resource to an artistic object connected to or contained in it."@en ;
-    rdfs:domain arco:ArchitecturalOrLandscapeHeritage ;
-    rdfs:range ex:ArtisticObject .
-
-ex:hasHeraldicElement
-    a rdf:Property ;
-    rdfs:label "has heraldic element"@en ;
-    rdfs:comment "Relates a cultural heritage resource to a heraldic element associated with it."@en ;
-    rdfs:domain arco:ArchitecturalOrLandscapeHeritage ;
-    rdfs:range ex:HeraldicElement .
 </code></pre>
 
 <hr>
