@@ -163,6 +163,10 @@ At the end, provide a short table with:
 
 <h3>ChatGPT result</h3>
 
+<a href="assets/images/chatgpt2.png" target="_blank">
+  Open screenshot of ChatGPT answer
+</a>
+
 <p>
   ChatGPT correctly followed the logic of the prompt. It identified the facade as the only directly represented construction element and explained that the chapels, historical figures, artistic object and heraldic element appeared only indirectly in photographic labels.
 </p>
@@ -176,6 +180,10 @@ At the end, provide a short table with:
 </p>
 
 <h3>Gemini result</h3>
+
+<a href="assets/images/gemini2.png" target="_blank">
+  Open screenshot of Gemini answer
+</a>
 
 <p>
   Gemini also correctly identified the situation as a knowledge graph gap and used the useful idea of moving from “strings” to “things”, meaning from textual labels to RDF resources.
