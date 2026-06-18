@@ -60,11 +60,19 @@ title: LLM Prompts
 
 <h3>ChatGPT result</h3>
 
+<a href="assets/images/chatgpt1.png" target="_blank">
+  Open screenshot of ChatGPT answer
+</a>
+
 <p>
   ChatGPT produced a structured answer divided into exterior, interior and unfinished components. It mentioned the marble facade, central entrance arch, semi-columns and pilasters, side arcades, single nave, wooden roof trusses, side chapels, marble balustrades, Gothic arches, sculptural decoration and unfinished upper facade.
 </p>
 
 <h3>Gemini result</h3>
+
+<a href="assets/images/gemini1.jpg" target="_blank">
+  Open screenshot of Gemini answer
+</a>
 
 <p>
   Gemini produced a richer architectural description. It focused on the triumphal arch facade, side facades, aqueduct-style arcades, funerary arcosolia, the high podium, the interior nave and chapels, and unbuilt or unfinished components such as the dome and upper structure.
