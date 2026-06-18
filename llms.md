@@ -399,11 +399,11 @@ Then briefly explain:
 </p>
 
 <p>
-  <a href="https://chat.openai.com/" target="_blank"><strong>ChatGPT</strong> was generally stronger at explaining the reasoning process and connecting the answers to the project methodology. It was especially useful for understanding why the information found in photographic labels can be considered a knowledge graph gap.
+  <a href="https://chat.openai.com/" target="_blank"><strong>ChatGPT</strong></a> was generally stronger at explaining the reasoning process and connecting the answers to the project methodology. It was especially useful for understanding why the information found in photographic labels can be considered a knowledge graph gap.
 </p>
 
 <p>
-  <a href="https://gemini.google.com/?hl=it" target="_blank"><strong>Gemini</strong> was stronger in producing compact RDF output when the prompt was highly constrained. However, in less constrained prompts, it tended to introduce additional modelling assumptions that were not directly supported by the SPARQL evidence.
+  <a href="https://gemini.google.com/?hl=it" target="_blank"><strong>Gemini</strong></a> was stronger in producing compact RDF output when the prompt was highly constrained. However, in less constrained prompts, it tended to introduce additional modelling assumptions that were not directly supported by the SPARQL evidence.
 </p>
 
 <p>
