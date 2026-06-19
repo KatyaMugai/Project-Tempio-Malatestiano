@@ -317,6 +317,10 @@ Then briefly explain:
 
 <h3>ChatGPT result</h3>
 
+<a href="assets/images/chatgpt3.png" target="_blank">
+  Open screenshot of ChatGPT answer
+</a>
+
 <p>
   ChatGPT generated RDF triples using the expected existing properties. It connected the internal chapels to Tempio Malatestiano through <code>cdesc:hasConstructionElement</code>, historical figures through <code>core:involvesAgent</code>, the Crocifisso giottesco through <code>a-dd:hasAssociatedObject</code> and the Stemma Malatesta through <code>a-dd:hasElementAffixedToCulturalProperty</code>.
 </p>
@@ -326,6 +330,10 @@ Then briefly explain:
 </p>
 
 <h3>Gemini result</h3>
+
+<a href="assets/images/gemini3.png" target="_blank">
+  Open screenshot of Gemini answer
+</a>
 
 <p>
   Gemini also generated RDF triples using the correct existing properties. Its Turtle output was compact, well structured and very close to the final modelling adopted in the project.
